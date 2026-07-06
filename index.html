@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NursingEdge — Nursing Excellence &amp; Governance Platform</title>
+<meta name="description" content="NursingEdge unifies shared governance, Magnet accreditation readiness, quality projects, and nursing excellence into one connected, traceable, AI-powered platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#0A1330;
+  --navy-800:#101C45;
+  --navy-700:#182658;
+  --indigo:#4F5FE8;
+  --indigo-deep:#4338CA;
+  --teal:#22D3EE;
+  --teal-soft:#2DD4BF;
+  --white:#FFFFFF;
+  --card:#F7F9FE;
+  --ink:#16213E;
+  --slate:#5A6789;
+  --line:rgba(34,211,238,.25);
+  --radius:18px;
+  --display:'Space Grotesk',sans-serif;
+  --body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px}
+img,svg{display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
+.eyebrow{font-family:var(--display);font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-soft)}
+.eyebrow.dark{color:var(--indigo-deep)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+
+/* ---------- Nav ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em}
+.brand-name span{color:var(--teal)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:12px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-deep) 100%);color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,95,232,.45)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(34,211,238,.5)}
+.btn-ghost:hover{background:rgba(34,211,238,.1);border-color:var(--teal)}
+.nav .btn{padding:10px 20px;font-size:.88rem}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:linear-gradient(160deg,var(--navy-900) 0%,var(--navy-800) 55%,#0E1B4D 100%);color:#fff;overflow:hidden;padding:96px 0 110px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(700px 420px at 82% 18%,rgba(79,95,232,.30),transparent 65%),
+  radial-gradient(600px 400px at 8% 88%,rgba(34,211,238,.14),transparent 60%);pointer-events:none}
+.hex-field{position:absolute;inset:0;opacity:.55;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);font-weight:700;margin:18px 0 20px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--teal) 0%,var(--teal-soft) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.13rem;color:rgba(255,255,255,.82);max-width:52ch;margin-bottom:34px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-proof{display:flex;gap:34px;margin-top:48px;flex-wrap:wrap}
+.proof{border-left:2px solid var(--line);padding-left:16px}
+.proof strong{font-family:var(--display);font-size:1.5rem;display:block;color:var(--teal)}
+.proof span{font-size:.85rem;color:rgba(255,255,255,.65)}
+
+/* ---------- Hub diagram ---------- */
+.hub-wrap{position:relative}
+.hub-svg{width:100%;height:auto;filter:drop-shadow(0 24px 60px rgba(0,0,0,.4))}
+
+/* ---------- Sections ---------- */
+section{padding:96px 0}
+.section-head{max-width:640px;margin-bottom:56px}
+.section-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin:14px 0 16px}
+.section-head p{color:var(--slate);font-size:1.05rem}
+
+/* Problem strip */
+.problem{background:var(--card);border-top:1px solid #E7ECF7;border-bottom:1px solid #E7ECF7}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.problem-card{background:#fff;border:1px solid #E7ECF7;border-radius:var(--radius);padding:30px 28px}
+.problem-card h3{font-size:1.08rem;margin-bottom:10px;color:var(--navy-800)}
+.problem-card p{color:var(--slate);font-size:.95rem}
+.problem-card .tag{font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo-deep);background:rgba(79,95,232,.09);padding:5px 12px;border-radius:999px;display:inline-block;margin-bottom:16px}
+
+/* Modules */
+.modules-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.module{position:relative;background:#fff;border:1px solid #E7ECF7;border-radius:var(--radius);padding:28px 24px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.module:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(16,28,69,.10);border-color:rgba(34,211,238,.5)}
+.module .mod-icon{width:52px;height:52px;margin-bottom:18px}
+.module h3{font-size:1.02rem;margin-bottom:8px;color:var(--navy-800)}
+.module p{font-size:.88rem;color:var(--slate)}
+
+/* Traceability */
+.trace{background:linear-gradient(160deg,var(--navy-900) 0%,var(--navy-800) 100%);color:#fff;position:relative;overflow:hidden}
+.trace::before{content:"";position:absolute;inset:0;background:radial-gradient(640px 400px at 88% 80%,rgba(34,211,238,.10),transparent 60%)}
+.trace .section-head{position:relative}
+.trace .section-head h2{color:#fff}
+.trace .section-head p{color:rgba(255,255,255,.72)}
+.chain{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:step}
+.chain-step{position:relative;padding:30px 26px 30px 30px;border-left:1px solid rgba(34,211,238,.28)}
+.chain-step::before{content:"";position:absolute;left:-7px;top:36px;width:13px;height:13px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 5px rgba(34,211,238,.18)}
+.chain-step h3{font-size:1.05rem;margin-bottom:10px;color:var(--teal)}
+.chain-step p{font-size:.9rem;color:rgba(255,255,255,.75)}
+
+/* Standards */
+.standards-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.standards-list{display:grid;gap:18px}
+.std-item{display:flex;gap:16px;align-items:flex-start}
+.std-item .dot{flex:none;width:34px;height:34px;border-radius:10px;background:rgba(79,95,232,.1);display:flex;align-items:center;justify-content:center}
+.std-item .dot svg{width:18px;height:18px}
+.std-item h3{font-size:1rem;margin-bottom:4px;color:var(--navy-800)}
+.std-item p{font-size:.92rem;color:var(--slate)}
+.standards-visual{background:linear-gradient(160deg,var(--navy-800),var(--navy-700));border-radius:24px;padding:48px 40px;color:#fff;text-align:center;box-shadow:0 24px 60px rgba(16,28,69,.25)}
+.standards-visual .big{font-family:var(--display);font-size:4.2rem;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--teal-soft));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.standards-visual .sub{font-size:1rem;color:rgba(255,255,255,.78);margin-top:10px}
+.standards-visual .rows{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+.standards-visual .row{background:rgba(255,255,255,.06);border:1px solid rgba(34,211,238,.25);border-radius:12px;padding:16px 12px}
+.standards-visual .row strong{font-family:var(--display);font-size:1.35rem;color:var(--teal);display:block}
+.standards-visual .row span{font-size:.78rem;color:rgba(255,255,255,.65)}
+
+/* Founder */
+.founder{background:var(--card);border-top:1px solid #E7ECF7;border-bottom:1px solid #E7ECF7}
+.founder-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.founder-card{background:linear-gradient(160deg,var(--navy-900),var(--navy-800));border-radius:24px;padding:44px 38px;color:#fff}
+.founder-card .creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.founder-card .cred{font-family:var(--display);font-size:.75rem;font-weight:600;letter-spacing:.06em;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.4);color:var(--teal);padding:5px 12px;border-radius:999px}
+.founder-card h3{font-size:1.4rem;margin-bottom:6px}
+.founder-card .role{color:rgba(255,255,255,.7);font-size:.95rem}
+.founder-copy p{color:var(--slate);margin-bottom:18px;font-size:1.02rem}
+.founder-copy p strong{color:var(--navy-800)}
+
+/* CTA */
+.cta{background:linear-gradient(140deg,var(--navy-900) 0%,var(--indigo-deep) 120%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 360px at 50% 0%,rgba(34,211,238,.16),transparent 65%)}
+.cta .container{position:relative}
+.cta h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:18px}
+.cta p{color:rgba(255,255,255,.8);max-width:56ch;margin:0 auto 36px;font-size:1.08rem}
+.cta .hero-ctas{justify-content:center}
+
+/* Footer */
+footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;font-size:.88rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .brand-name{font-size:1.05rem}
+
+/* ---------- Responsive ---------- */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .problem-grid{grid-template-columns:1fr}
+  .modules-grid{grid-template-columns:repeat(2,1fr)}
+  .chain{grid-template-columns:1fr}
+  .chain-step{border-left:1px solid rgba(34,211,238,.28)}
+  .standards-grid,.founder-grid{grid-template-columns:1fr;gap:44px}
+  .nav-links{display:none}
+}
+@media (max-width:560px){
+  .modules-grid{grid-template-columns:1fr}
+  section{padding:72px 0}
+  .hero{padding:72px 0 84px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================================================
+     LOGO — inline SVG, easy to adjust.
+     Hexagon + "N" + network node, teal→indigo gradient.
+     To adjust: edit the <symbol id="ne-logo"> below once,
+     and every logo on the page updates.
+====================================================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lgLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#4F5FE8"/>
+    </linearGradient>
+    <symbol id="ne-logo" viewBox="0 0 64 64">
+      <!-- hexagon -->
+      <path d="M32 3 L57 17.5 V46.5 L32 61 L7 46.5 V17.5 Z" fill="none" stroke="url(#lgLogo)" stroke-width="3.5" stroke-linejoin="round"/>
+      <!-- N letterform -->
+      <path d="M22 44 V21 L42 44 V21" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- network node + link -->
+      <circle cx="50" cy="12" r="4.5" fill="#22D3EE"/>
+      <line x1="46.5" y1="14.5" x2="41" y2="18" stroke="#22D3EE" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="NursingEdge home">
+      <svg width="40" height="40" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
+      <span class="brand-name">Nursing<span>Edge</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#modules">Platform</a>
+      <a href="#traceability">How it works</a>
+      <a href="#magnet">Magnet readiness</a>
+      <a href="#founder">About</a>
+      <a class="btn btn-primary" href="#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title" style="padding-top:88px">
+  <svg class="hex-field" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(34,211,238,.10)" stroke-width="1.2">
+      <path d="M110 80 l38 22 v44 l-38 22 -38 -22 v-44 z"/>
+      <path d="M1080 120 l38 22 v44 l-38 22 -38 -22 v-44 z"/>
+      <path d="M960 480 l30 17 v34 l-30 17 -30 -17 v-34 z"/>
+      <path d="M180 500 l30 17 v34 l-30 17 -30 -17 v-34 z"/>
+      <path d="M620 40 l24 14 v28 l-24 14 -24 -14 v-28 z"/>
+    </g>
+  </svg>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Nursing Excellence &amp; Governance Platform</span>
+      <h1 id="hero-title">Everything connected.<br>Everything traceable.<br><em>Magnet-ready, every day.</em></h1>
+      <p class="lead">NursingEdge unifies shared governance, meeting minutes, Magnet stories, quality projects, and the clinical ladder into one AI-powered platform — so the daily work of nursing becomes living evidence for accreditation.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#demo">Request a demo</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof"><strong>105</strong><span>ANCC Magnet standards built in</span></div>
+        <div class="proof"><strong>8</strong><span>connected modules, one hub</span></div>
+        <div class="proof"><strong>1 sec</strong><span>real-time dashboard refresh</span></div>
+      </div>
+    </div>
+
+    <!-- Signature: hexagonal module hub -->
+    <div class="hub-wrap" aria-hidden="true">
+      <svg class="hub-svg" viewBox="0 0 520 520">
+        <defs>
+          <linearGradient id="hubG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#4F5FE8"/>
+          </linearGradient>
+        </defs>
+        <!-- spokes -->
+        <g stroke="rgba(34,211,238,.45)" stroke-width="1.6">
+          <line x1="260" y1="260" x2="260" y2="78"/>
+          <line x1="260" y1="260" x2="418" y2="150"/>
+          <line x1="260" y1="260" x2="452" y2="292"/>
+          <line x1="260" y1="260" x2="368" y2="430"/>
+          <line x1="260" y1="260" x2="260" y2="452"/>
+          <line x1="260" y1="260" x2="152" y2="430"/>
+          <line x1="260" y1="260" x2="68" y2="292"/>
+          <line x1="260" y1="260" x2="102" y2="150"/>
+        </g>
+        <!-- node dots on spokes -->
+        <g fill="#22D3EE">
+          <circle cx="260" cy="160" r="3.5"/><circle cx="345" cy="200" r="3.5"/>
+          <circle cx="360" cy="277" r="3.5"/><circle cx="318" cy="352" r="3.5"/>
+          <circle cx="260" cy="360" r="3.5"/><circle cx="202" cy="352" r="3.5"/>
+          <circle cx="160" cy="277" r="3.5"/><circle cx="175" cy="200" r="3.5"/>
+        </g>
+        <!-- center hexagon with logo -->
+        <path d="M260 190 L322 226 V298 L260 334 L198 298 V226 Z" fill="#101C45" stroke="url(#hubG)" stroke-width="3"/>
+        <path d="M238 300 V228 L284 300 V228" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="308" cy="206" r="6" fill="#22D3EE"/>
+        <!-- module satellites -->
+        <g font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+          <g><path d="M260 40 L294 60 V98 L260 118 L226 98 V60 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="260" y="75" fill="#fff">Shared</text><text x="260" y="92" fill="#fff">governance</text></g>
+          <g><path d="M418 112 L452 132 V170 L418 190 L384 170 V132 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="418" y="147" fill="#fff">Meeting</text><text x="418" y="164" fill="#fff">minutes</text></g>
+          <g><path d="M452 254 L486 274 V312 L452 332 L418 312 V274 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="452" y="289" fill="#fff">Magnet</text><text x="452" y="306" fill="#fff">stories</text></g>
+          <g><path d="M368 392 L402 412 V450 L368 470 L334 450 V412 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="368" y="427" fill="#fff">Quality</text><text x="368" y="444" fill="#fff">projects</text></g>
+          <g><path d="M260 414 L294 434 V472 L260 492 L226 472 V434 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="260" y="456" fill="#fff">Inquiries</text></g>
+          <g><path d="M152 392 L186 412 V450 L152 470 L118 450 V412 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="152" y="427" fill="#fff">Clinical</text><text x="152" y="444" fill="#fff">ladder</text></g>
+          <g><path d="M68 254 L102 274 V312 L68 332 L34 312 V274 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="68" y="289" fill="#fff">Research</text><text x="68" y="306" fill="#fff">&amp; EBP</text></g>
+          <g><path d="M102 112 L136 132 V170 L102 190 L68 170 V132 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="1.6"/><text x="102" y="147" fill="#fff">Real-time</text><text x="102" y="164" fill="#fff">dashboard</text></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="problem" aria-labelledby="problem-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow dark">The problem</span>
+      <h2 id="problem-title">Nursing excellence shouldn't live in scattered files</h2>
+      <p>Magnet journeys stall when the evidence of great nursing is buried across shared drives, email threads, and disconnected systems.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="tag">Before</span>
+        <h3>Evidence scattered everywhere</h3>
+        <p>Council minutes in one folder, quality data in another, stories written from memory months later. Nothing connects.</p>
+      </div>
+      <div class="problem-card">
+        <span class="tag">Before</span>
+        <h3>Document scramble at deadline</h3>
+        <p>Teams spend months reconstructing what already happened — chasing signatures, dates, and outcomes for the Document of Evidence.</p>
+      </div>
+      <div class="problem-card">
+        <span class="tag">Before</span>
+        <h3>Governance without visibility</h3>
+        <p>Council-to-council and council-to-cabinet escalations get lost, and leaders can't see structural empowerment in action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODULES ================= -->
+<section id="modules" aria-labelledby="modules-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow dark">The platform</span>
+      <h2 id="modules-title">Eight modules. One connected hub.</h2>
+      <p>Every module feeds the same evidence engine, so daily nursing activity becomes traceable proof of excellence.</p>
+    </div>
+    <div class="modules-grid">
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="14" r="6" fill="none" stroke="#4F5FE8" stroke-width="2.5"/><circle cx="12" cy="38" r="6" fill="none" stroke="#22D3EE" stroke-width="2.5"/><circle cx="40" cy="38" r="6" fill="none" stroke="#22D3EE" stroke-width="2.5"/><path d="M22 19 L15 32 M30 19 L37 32 M18 38 H34" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Shared governance</h3>
+        <p>Council structures with council-to-council and council-to-cabinet escalation flows, fully tracked.</p>
+      </div>
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><rect x="12" y="8" width="28" height="36" rx="4" fill="none" stroke="#4F5FE8" stroke-width="2.5"/><path d="M19 18 H33 M19 26 H33 M19 34 H27" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Meeting minutes</h3>
+        <p>AI generates minutes automatically from Zoom or Teams transcripts — decisions and actions captured in seconds.</p>
+      </div>
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><path d="M26 6 L31 18 L44 19 L34 28 L37 41 L26 34 L15 41 L18 28 L8 19 L21 18 Z" fill="none" stroke="#4F5FE8" stroke-width="2.5" stroke-linejoin="round"/><circle cx="26" cy="26" r="3" fill="#22D3EE"/></svg>
+        <h3>Magnet stories</h3>
+        <p>Guided, AI-assisted story building mapped directly to ANCC standards and example evidence requirements.</p>
+      </div>
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><path d="M10 42 V26 M22 42 V16 M34 42 V22 M46 42 V10" stroke="#4F5FE8" stroke-width="3" stroke-linecap="round"/><path d="M8 14 L20 8 L32 13 L44 6" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Quality projects</h3>
+        <p>A3 problem-solving, timelines, teams, and outcomes — from charter to sustained results.</p>
+      </div>
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><rect x="8" y="12" width="36" height="26" rx="5" fill="none" stroke="#4F5FE8" stroke-width="2.5"/><path d="M8 18 L26 30 L44 18" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Inquiries</h3>
+        <p>Structured intake, routing, replies, and reporting — every question answered and auditable.</p>
+      </div>
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><path d="M14 44 H30 M18 44 V36 H34 V28 H38 V20 H42 V8" stroke="#4F5FE8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="42" cy="8" r="4" fill="#22D3EE"/></svg>
+        <h3>Clinical ladder</h3>
+        <p>Advancement tracking with clear criteria, evidence uploads, and progression visibility.</p>
+      </div>
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><circle cx="22" cy="22" r="12" fill="none" stroke="#4F5FE8" stroke-width="2.5"/><path d="M31 31 L42 42" stroke="#4F5FE8" stroke-width="3" stroke-linecap="round"/><path d="M17 22 H27 M22 17 V27" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Research &amp; EBP</h3>
+        <p>Evidence-based practice and research projects with milestones, exports, and interprofessional teams.</p>
+      </div>
+
+      <div class="module">
+        <svg class="mod-icon" viewBox="0 0 52 52" aria-hidden="true"><path d="M8 26 A18 18 0 0 1 44 26" fill="none" stroke="#4F5FE8" stroke-width="3" stroke-linecap="round"/><path d="M26 26 L36 16" stroke="#22D3EE" stroke-width="3" stroke-linecap="round"/><circle cx="26" cy="26" r="3.5" fill="#22D3EE"/><path d="M10 36 H42" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Real-time dashboard</h3>
+        <p>Leadership-grade visibility refreshed every second — governance activity, readiness, and outcomes at a glance.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRACEABILITY ================= -->
+<section class="trace" id="traceability" aria-labelledby="trace-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2 id="trace-title">From daily activity to accreditation evidence</h2>
+      <p>NursingEdge builds the evidence chain automatically, so nothing needs to be reconstructed at survey time.</p>
+    </div>
+    <div class="chain">
+      <div class="chain-step">
+        <h3>Capture</h3>
+        <p>Councils meet, projects run, nurses advance. Every activity is recorded where it happens — no extra documentation burden.</p>
+      </div>
+      <div class="chain-step">
+        <h3>Connect</h3>
+        <p>AI links activities, minutes, and outcomes to each other and to the people and units involved.</p>
+      </div>
+      <div class="chain-step">
+        <h3>Map</h3>
+        <p>Evidence is mapped to the right ANCC Magnet standard and section — automatically, with your team in control.</p>
+      </div>
+      <div class="chain-step">
+        <h3>Prove</h3>
+        <p>Stories, exports, and dashboards deliver survey-ready evidence with a full, auditable trail behind every claim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAGNET ================= -->
+<section id="magnet" aria-labelledby="magnet-title">
+  <div class="container standards-grid">
+    <div>
+      <div class="section-head" style="margin-bottom:36px">
+        <span class="eyebrow dark">Magnet readiness</span>
+        <h2 id="magnet-title">Built on the standards, not around them</h2>
+        <p>NursingEdge was designed by an accreditation surveyor — the ANCC framework isn't a checklist bolted on, it's the platform's skeleton.</p>
+      </div>
+      <div class="standards-list">
+        <div class="std-item">
+          <span class="dot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 L8.5 15 L16 5.5" fill="none" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h3>Granular section schemas per standard</h3><p>Narrative and data requirements broken into guided sections, aligned to the Data Collection Tool.</p></div>
+        </div>
+        <div class="std-item">
+          <span class="dot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 L8.5 15 L16 5.5" fill="none" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h3>Evidence management with inline preview</h3><p>Attach, preview, and organize supporting documents against the exact standard they prove.</p></div>
+        </div>
+        <div class="std-item">
+          <span class="dot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 L8.5 15 L16 5.5" fill="none" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h3>Survey-ready exports</h3><p>Polished PDF exports for stories, A3 projects, EBP, and research — formatted for reviewers.</p></div>
+        </div>
+        <div class="std-item">
+          <span class="dot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 L8.5 15 L16 5.5" fill="none" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h3>Secure and deployment-flexible</h3><p>Role-based access, tenant isolation, and on-premise deployment options for hospital IT requirements.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="standards-visual" aria-label="Magnet standards coverage">
+      <div class="big">105</div>
+      <div class="sub">ANCC Magnet standards, fully structured in the platform</div>
+      <div class="rows">
+        <div class="row"><strong>29</strong><span>narrative EO standards with guided sections</span></div>
+        <div class="row"><strong>6</strong><span>data-driven EO standards</span></div>
+        <div class="row"><strong>70</strong><span>SE, EP &amp; TL standards with granular schemas</span></div>
+        <div class="row"><strong>100%</strong><span>traceable evidence behind every entry</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUNDER ================= -->
+<section class="founder" id="founder" aria-labelledby="founder-title">
+  <div class="container founder-grid">
+    <div class="founder-card">
+      <svg width="52" height="52" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
+      <h3 style="margin-top:22px">Ahmad Abu Jaber</h3>
+      <div class="role">Founder — Nurse, Quality Leader, Accreditation Surveyor</div>
+      <div class="creds">
+        <span class="cred">RN</span><span class="cred">MHSM</span><span class="cred">CPHQ</span><span class="cred">CPPS</span><span class="cred">CPHRM</span>
+      </div>
+    </div>
+    <div class="founder-copy">
+      <span class="eyebrow dark">Why NursingEdge exists</span>
+      <h2 id="founder-title" style="font-size:clamp(1.7rem,3vw,2.3rem);margin:14px 0 20px">Built by someone who lived the problem</h2>
+      <p>After <strong>17+ years</strong> in nursing quality, patient safety, and accreditation — across leading institutions and as a national accreditation surveyor — one frustration kept repeating: the evidence of nursing excellence existed everywhere, but never in one place.</p>
+      <p>So he learned to code and built the platform he always needed: one hub where governance, quality, and professional development connect — and where <strong>Magnet readiness is a byproduct of daily work</strong>, not a last-minute scramble.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="demo" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title">See your nursing excellence, connected</h2>
+    <p>Book a live walkthrough of NursingEdge for your nursing leadership, Magnet program team, or quality department.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="mailto:aabujaber81@gmail.com?subject=NursingEdge%20demo%20request">Request a demo</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container foot">
+    <a class="brand" href="#top">
+      <svg width="30" height="30" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
+      <span class="brand-name">Nursing<span style="color:var(--teal)">Edge</span></span>
+    </a>
+    <div>Nursing Excellence &amp; Governance Platform</div>
+    <div>© 2026 NursingEdge. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
