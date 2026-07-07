@@ -242,6 +242,39 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 .foot-links a:hover{color:var(--teal)}
 .trademark-note{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);max-width:900px}
 
+/* ---------- Careers ---------- */
+.careers{background:var(--card);border-top:1px solid #E7ECF7;border-bottom:1px solid #E7ECF7}
+.culture-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:56px}
+.culture-card{background:#fff;border:1px solid #E7ECF7;border-radius:var(--radius);padding:24px 22px}
+.culture-card .cic{width:38px;height:38px;border-radius:10px;background:rgba(79,95,232,.09);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.culture-card h3{font-size:.98rem;margin-bottom:8px;color:var(--navy-800)}
+.culture-card p{font-size:.86rem;color:var(--slate)}
+.role-card{background:linear-gradient(160deg,var(--navy-900),var(--navy-800));border-radius:20px;padding:36px 34px;color:#fff;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-bottom:56px}
+.role-card .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.role-card .tags span{font-family:var(--display);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.3);color:var(--teal-soft);padding:4px 11px;border-radius:999px}
+.role-card h3{font-size:1.35rem;margin-bottom:10px}
+.role-card p{color:rgba(255,255,255,.78);font-size:.95rem;max-width:60ch;margin-bottom:14px}
+.role-card ul{margin:0;padding-left:20px;color:rgba(255,255,255,.78);font-size:.9rem;display:grid;gap:6px}
+.role-card .apply-col{text-align:center}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:step}
+.process-step{position:relative;padding:0 26px 0 30px;border-left:1px solid rgba(79,95,232,.25)}
+.process-step:first-child{padding-left:0;border-left:none}
+.process-step::before{content:"";position:absolute;left:-7px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--indigo-deep);box-shadow:0 0 0 5px rgba(79,95,232,.14)}
+.process-step:first-child::before{left:0}
+.process-step h4{font-family:var(--display);font-size:1rem;margin-bottom:8px;color:var(--navy-800)}
+.process-step p{font-size:.88rem;color:var(--slate)}
+.careers-foot{margin-top:36px;font-size:.92rem;color:var(--slate);text-align:center}
+.careers-foot a{color:var(--indigo-deep);text-decoration:underline}
+@media (max-width:960px){
+  .culture-grid{grid-template-columns:repeat(2,1fr)}
+  .role-card{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr;gap:20px}
+  .process-step{border-left:1px solid rgba(79,95,232,.25);padding-left:26px}
+  .process-step:first-child{padding-left:26px}
+  .process-step:first-child::before{left:-7px}
+}
+@media (max-width:560px){.culture-grid{grid-template-columns:1fr}}
+
 /* ---------- Responsive ---------- */
 @media (max-width:960px){
   .hero-grid{grid-template-columns:1fr;gap:48px}
@@ -308,6 +341,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <a href="#traceability">How it works</a>
       <a href="#magnet">Magnet readiness</a>
       <a href="#founder">About</a>
+      <a href="#careers">Careers</a>
       <a class="btn btn-primary" href="#demo">Request a demo</a>
     </nav>
   </div>
@@ -648,6 +682,125 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <p>After <strong>17+ years</strong> in nursing quality, patient safety, and accreditation — across leading institutions and as a national accreditation surveyor — one frustration kept repeating: the evidence of nursing excellence existed everywhere, but never in one place.</p>
       <p>So he learned to code and built the platform he always needed: one hub where governance, quality, and professional development connect — and where <strong>Magnet readiness is a byproduct of daily work</strong>, not a last-minute scramble.</p>
     </div>
+  </div>
+</section>
+
+<!-- ================= CAREERS ================= -->
+<section class="careers" id="careers" aria-labelledby="careers-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow dark">Careers at NursingEdge</span>
+      <h2 id="careers-title">Build the platform, from the ground up</h2>
+      <p>NursingEdge is early — which means real ownership, direct access to the founder's 17+ years of nursing and accreditation expertise, and a chance to shape the product from day one.</p>
+    </div>
+
+    <div class="culture-grid">
+      <div class="culture-card reveal-item">
+        <span class="cic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6C19 16.5 12 21 12 21Z" stroke="#4F5FE8" stroke-width="1.8"/></svg></span>
+        <h3>Mission-driven</h3>
+        <p>Every feature helps nursing leaders prove the excellence that's already happening on their units.</p>
+      </div>
+      <div class="culture-card reveal-item">
+        <span class="cic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 L14 9 L21 9 L15.5 13.5 L17.5 21 L12 16.5 L6.5 21 L8.5 13.5 L3 9 L10 9 Z" stroke="#4F5FE8" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <h3>Ground-floor ownership</h3>
+        <p>No layers to navigate — you'll shape architecture and product decisions directly with the founder.</p>
+      </div>
+      <div class="culture-card reveal-item">
+        <span class="cic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="#4F5FE8" stroke-width="1.8"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <h3>Deep domain expertise</h3>
+        <p>Work alongside a founder who spent 17+ years as a nurse, quality leader, and ANCC accreditation surveyor.</p>
+      </div>
+      <div class="culture-card reveal-item">
+        <span class="cic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h4l3 8 4-16 3 8h4" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Fully remote &amp; flexible</h3>
+        <p>Work from anywhere. What matters is shipping good work, not hours logged.</p>
+      </div>
+    </div>
+
+    <div class="role-card reveal-item">
+      <div>
+        <div class="tags"><span>Engineering</span><span>Remote (Anywhere)</span><span>Full-time</span></div>
+        <h3>Founding Full Stack Engineer</h3>
+        <p>Own architecture and ship features across NursingEdge's platform — shared governance workflows, AI-assisted documentation, Magnet evidence mapping, and secure multi-tenant deployments for hospital IT.</p>
+        <ul>
+          <li>Full-stack development (modern JavaScript/TypeScript, React, Node) across the product</li>
+          <li>Design and evolve the architecture as we go from pilot hospitals to enterprise deployments</li>
+          <li>Build AI-assisted features responsibly and securely around sensitive healthcare data</li>
+          <li>Work directly with the founder to translate deep nursing/accreditation expertise into product</li>
+        </ul>
+      </div>
+      <div class="apply-col">
+        <a class="btn btn-primary" href="mailto:aabujaber81@gmail.com?subject=Founding%20Full%20Stack%20Engineer%20application">Apply now</a>
+      </div>
+    </div>
+
+    <div class="role-card reveal-item">
+      <div>
+        <div class="tags"><span>Engineering</span><span>Remote (Anywhere)</span><span>Full-time</span></div>
+        <h3>Forward Deployed / Implementation Engineer</h3>
+        <p>Deploy and configure NursingEdge directly with hospital customers — onboarding nursing leadership, mapping their governance structures into the platform, and making sure adoption actually sticks.</p>
+        <ul>
+          <li>Lead technical onboarding and configuration for new hospital customers</li>
+          <li>Work directly with nursing leadership to map councils, standards, and workflows into the platform</li>
+          <li>Troubleshoot in the field and feed real customer needs back into the product roadmap</li>
+          <li>Bridge engineering and real-world hospital operations</li>
+        </ul>
+      </div>
+      <div class="apply-col">
+        <a class="btn btn-primary" href="mailto:aabujaber81@gmail.com?subject=Forward%20Deployed%20Engineer%20application">Apply now</a>
+      </div>
+    </div>
+
+    <div class="role-card reveal-item">
+      <div>
+        <div class="tags"><span>Sales</span><span>Remote (Anywhere)</span><span>Full-time</span></div>
+        <h3>Founding Sales / Account Executive</h3>
+        <p>Drive revenue growth as NursingEdge's first sales hire — build relationships with nursing executives and Magnet program leaders, and help health systems see the case for connected, traceable nursing excellence.</p>
+        <ul>
+          <li>Own the full sales cycle, from first conversation to closed deal, with hospital nursing leadership</li>
+          <li>Build relationships with CNOs, Magnet program directors, and quality departments</li>
+          <li>Work directly with the founder to refine positioning and pricing as you learn the market</li>
+          <li>Help lay the foundation for NursingEdge's go-to-market motion</li>
+        </ul>
+      </div>
+      <div class="apply-col">
+        <a class="btn btn-primary" href="mailto:aabujaber81@gmail.com?subject=Founding%20Sales%20-%20Account%20Executive%20application">Apply now</a>
+      </div>
+    </div>
+
+    <div class="role-card reveal-item">
+      <div>
+        <div class="tags"><span>Marketing</span><span>Remote (Anywhere)</span><span>Full-time</span></div>
+        <h3>Founding Marketing / Growth</h3>
+        <p>Shape NursingEdge's go-to-market strategy and brand — content, positioning, and demand generation for a nurse-led healthcare platform going up against larger, funded competitors.</p>
+        <ul>
+          <li>Own content, messaging, and brand voice across the website and outbound channels</li>
+          <li>Build demand-generation programs targeting nursing leadership and Magnet program teams</li>
+          <li>Work directly with the founder to turn deep clinical expertise into compelling market-facing content</li>
+          <li>Help establish NursingEdge's positioning from the ground up</li>
+        </ul>
+      </div>
+      <div class="apply-col">
+        <a class="btn btn-primary" href="mailto:aabujaber81@gmail.com?subject=Founding%20Marketing%20application">Apply now</a>
+      </div>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step reveal-item">
+        <h4>1. Apply</h4>
+        <p>Email your resume and a short note on why this problem interests you.</p>
+      </div>
+      <div class="process-step reveal-item">
+        <h4>2. Talk with the founder</h4>
+        <p>A 30–45 minute call to talk through your experience and the platform's direction.</p>
+      </div>
+      <div class="process-step reveal-item">
+        <h4>3. Offer</h4>
+        <p>Straightforward next steps — no drawn-out process, no layers of interviews.</p>
+      </div>
+    </div>
+
+    <p class="careers-foot">Don't see the exact fit but think you could help build this? <a href="mailto:aabujaber81@gmail.com?subject=NursingEdge%20-%20let's%20talk">Reach out anyway</a>.</p>
   </div>
 </section>
 
