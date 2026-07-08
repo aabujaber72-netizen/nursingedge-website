@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — NursingEdge Advisory</title>
+<meta name="description" content="The NursingEdge Advisory team: practicing Magnet program directors and nurse leaders from leading hospitals across the Middle East, led by an accreditation surveyor.">
+<link rel="canonical" href="https://nursingedgeadvisory.com/team.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#0A1330; --navy-800:#101C45; --navy-700:#182658;
+  --indigo:#4F5FE8; --indigo-deep:#4338CA; --teal:#22D3EE; --teal-soft:#2DD4BF;
+  --white:#FFFFFF; --card:#F7F9FE; --ink:#16213E; --slate:#5A6789;
+  --radius:18px; --display:'Space Grotesk',sans-serif; --body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px}
+img,svg{display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
+.eyebrow{font-family:var(--display);font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-soft)}
+.eyebrow.dark{color:var(--indigo-deep)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem}
+.brand-name span{color:var(--teal)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:12px;transition:transform .18s ease,box-shadow .18s ease;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-deep) 100%);color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,95,232,.45)}
+.nav .btn{padding:10px 20px;font-size:.88rem}
+
+.page-hero{background:linear-gradient(160deg,var(--navy-900) 0%,var(--navy-800) 100%);color:#fff;padding:80px 0 72px;position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 380px at 85% 20%,rgba(79,95,232,.28),transparent 62%)}
+.page-hero .container{position:relative}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);margin:16px 0 18px}
+.page-hero p{color:rgba(255,255,255,.8);max-width:60ch;font-size:1.08rem}
+
+section{padding:88px 0}
+.section-head{max-width:640px;margin-bottom:56px}
+.section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);margin:14px 0 16px}
+.section-head p{color:var(--slate);font-size:1.05rem}
+
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.member{background:#fff;border:1px solid #E7ECF7;border-radius:var(--radius);padding:32px 28px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.member:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(16,28,69,.10);border-color:rgba(34,211,238,.5)}
+.avatar{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--navy-800),var(--navy-700));display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-family:var(--display);font-weight:700;font-size:1.6rem;color:var(--teal);border:2px solid rgba(34,211,238,.4);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.member h3{font-size:1.15rem;margin-bottom:4px}
+.member .role{color:var(--indigo-deep);font-size:.88rem;font-weight:600;margin-bottom:12px}
+.member p{color:var(--slate);font-size:.92rem}
+.member .creds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.member .cred{font-family:var(--display);font-size:.7rem;font-weight:600;letter-spacing:.05em;background:rgba(79,95,232,.09);color:var(--indigo-deep);padding:4px 10px;border-radius:999px}
+.member.placeholder{border-style:dashed;background:var(--card)}
+.member.placeholder .avatar{background:var(--card);border:2px dashed rgba(22,33,62,.2);color:var(--slate)}
+
+.join{background:linear-gradient(140deg,var(--navy-900) 0%,var(--indigo-deep) 120%);color:#fff;text-align:center}
+.join h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:16px}
+.join p{color:rgba(255,255,255,.8);max-width:56ch;margin:0 auto 32px}
+
+footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;font-size:.88rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.trademark-note{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);max-width:900px}
+
+@media (max-width:960px){.team-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
+@media (max-width:600px){.team-grid{grid-template-columns:1fr}section{padding:64px 0}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lgLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#4F5FE8"/>
+    </linearGradient>
+    <symbol id="ne-logo" viewBox="0 0 64 64">
+      <path d="M32 3 L57 17.5 V46.5 L32 61 L7 46.5 V17.5 Z" fill="none" stroke="url(#lgLogo)" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M22 44 V21 L42 44 V21" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="50" cy="12" r="4.5" fill="#22D3EE"/>
+      <line x1="46.5" y1="14.5" x2="41" y2="18" stroke="#22D3EE" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="NursingEdge home">
+      <svg width="40" height="40" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
+      <span class="brand-name">Nursing<span>Edge</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/#modules">Platform</a>
+      <a href="/#advisory">Advisory</a>
+      <a href="/team.html">Team</a>
+      <a href="/#careers">Careers</a>
+      <a class="btn btn-primary" href="/#demo">Book a consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow">NursingEdge Advisory</span>
+    <h1>Consultants who hold the role today</h1>
+    <p>Our advisory team is made up of practicing Magnet program directors and nurse leaders from leading hospitals across the Middle East — led by a founder who spent 17+ years in nursing quality, patient safety, and accreditation surveying.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow dark">Leadership</span>
+      <h2>Founder</h2>
+    </div>
+    <div class="team-grid">
+      <div class="member">
+        <div class="avatar">AA</div>
+        <h3>Ahmad Abu Jaber</h3>
+        <div class="role">Founder &amp; Principal Consultant</div>
+        <p>Nurse, quality leader, and accreditation surveyor with 17+ years across leading institutions. Built the NursingEdge platform to make Magnet readiness a byproduct of daily work.</p>
+        <div class="creds">
+          <span class="cred">RN</span><span class="cred">MHSM</span><span class="cred">CPHQ</span><span class="cred">CPPS</span><span class="cred">CPHRM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow dark">Advisory network</span>
+      <h2>Our consultants</h2>
+      <p>Each engagement is matched with the consultant whose experience best fits your organization's setting and phase. Full profiles coming soon.</p>
+    </div>
+    <div class="team-grid">
+      <!-- TEMPLATE: copy this block for each consultant.
+           Replace initials (or use <img src="photo.jpg" alt="Name">), name, role, bio, credentials. -->
+      <div class="member placeholder">
+        <div class="avatar">?</div>
+        <h3>[Consultant name]</h3>
+        <div class="role">Magnet Program Director — [Hospital, Country]</div>
+        <p>[Two or three sentences: their Magnet journey experience, specialty areas, and what they lead today.]</p>
+        <div class="creds"><span class="cred">RN</span><span class="cred">[Credential]</span></div>
+      </div>
+      <div class="member placeholder">
+        <div class="avatar">?</div>
+        <h3>[Consultant name]</h3>
+        <div class="role">Nursing Excellence Lead — [Hospital, Country]</div>
+        <p>[Two or three sentences: their governance and evidence work, and the designations they have contributed to.]</p>
+        <div class="creds"><span class="cred">RN</span><span class="cred">[Credential]</span></div>
+      </div>
+      <div class="member placeholder">
+        <div class="avatar">?</div>
+        <h3>[Consultant name]</h3>
+        <div class="role">Quality &amp; Patient Safety Leader — [Hospital, Country]</div>
+        <p>[Two or three sentences: nurse-sensitive indicator work, safety culture programs, publications if any.]</p>
+        <div class="creds"><span class="cred">RN</span><span class="cred">[Credential]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="join">
+  <div class="container">
+    <h2>Work with the team</h2>
+    <p>Tell us where you are in the Magnet journey and we'll match you with the right consultant for a discovery call.</p>
+    <a class="btn btn-primary" href="/#demo">Book a consultation</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <a class="brand" href="/">
+        <svg width="30" height="30" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
+        <span class="brand-name">Nursing<span style="color:var(--teal)">Edge</span></span>
+      </a>
+      <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
+      <div>© 2026 NursingEdge. All rights reserved.</div>
+    </div>
+    <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, Pathway to Excellence<sup>&reg;</sup>, PTAP<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and NursingEdge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
+  </div>
+</footer>
+
+</body>
+</html>
