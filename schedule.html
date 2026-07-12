@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule a Call — NursingEdge</title>
+<meta name="description" content="Book a platform demo or a Magnet advisory consultation with NursingEdge founder Ahmad Abu Jaber.">
+<link rel="canonical" href="https://nursingedgeadvisory.com/schedule.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#0A1330; --navy-800:#101C45; --navy-700:#182658;
+  --indigo:#4F5FE8; --indigo-deep:#4338CA; --teal:#22D3EE; --teal-soft:#2DD4BF;
+  --white:#FFFFFF; --card:#F7F9FE; --ink:#16213E; --slate:#5A6789;
+  --radius:18px; --display:'Space Grotesk',sans-serif; --body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px}
+img,svg{display:block}
+a{text-decoration:none;color:inherit}
+a:hover{color:var(--indigo-deep)}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
+.eyebrow{font-family:var(--display);font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-soft)}
+.eyebrow.dark{color:var(--indigo-deep)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem}
+.brand-name span{color:var(--teal)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:12px;transition:transform .18s ease,box-shadow .18s ease;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-deep) 100%);color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,95,232,.45);color:#fff}
+.btn-primary:disabled{opacity:.6;cursor:default;transform:none}
+.nav .btn{padding:10px 20px;font-size:.88rem}
+
+.page-hero{background:linear-gradient(160deg,var(--navy-900) 0%,var(--navy-800) 100%);color:#fff;padding:72px 0 64px;position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 380px at 85% 20%,rgba(79,95,232,.28),transparent 62%)}
+.page-hero .container{position:relative}
+.page-hero h1{font-size:clamp(2rem,4vw,2.8rem);margin:16px 0 16px}
+.page-hero p{color:rgba(255,255,255,.8);max-width:60ch;font-size:1.05rem}
+
+section{padding:72px 0}
+.schedule-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+
+.info-card{background:var(--card);border:1px solid #E7ECF7;border-radius:var(--radius);padding:32px 28px}
+.info-card h3{font-size:1.05rem;margin-bottom:14px;color:var(--navy-800)}
+.info-list{display:grid;gap:16px;margin-bottom:24px}
+.info-item{display:flex;gap:14px;align-items:flex-start}
+.info-item .ic{flex:none;width:32px;height:32px;border-radius:9px;background:rgba(79,95,232,.1);display:flex;align-items:center;justify-content:center}
+.info-item h4{font-size:.92rem;margin-bottom:2px;color:var(--navy-800)}
+.info-item p{font-size:.86rem;color:var(--slate)}
+.info-card .alt{font-size:.88rem;color:var(--slate);padding-top:18px;border-top:1px solid #E7ECF7}
+.info-card .alt a{color:var(--indigo-deep);text-decoration:underline}
+
+.book-card{background:#fff;border:1px solid #E7ECF7;border-radius:var(--radius);padding:36px 34px;box-shadow:0 20px 50px rgba(16,28,69,.08)}
+.reason-toggle{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px}
+.reason-toggle input{position:absolute;opacity:0;pointer-events:none}
+.reason-toggle label{display:block;cursor:pointer;border:1.5px solid #E7ECF7;border-radius:14px;padding:16px 16px;transition:border-color .18s ease,background .18s ease}
+.reason-toggle label .rt-title{font-family:var(--display);font-weight:600;font-size:.95rem;color:var(--navy-800);margin-bottom:4px;display:block}
+.reason-toggle label .rt-sub{font-size:.8rem;color:var(--slate)}
+.reason-toggle input:checked + label{border-color:var(--indigo);background:rgba(79,95,232,.06)}
+.reason-toggle input:focus-visible + label{outline:3px solid var(--teal);outline-offset:2px}
+
+.book-form label.field-label{display:block;font-size:.82rem;font-weight:600;color:var(--navy-800);margin-bottom:6px}
+.form-row{display:flex;gap:14px;margin-bottom:16px}
+.form-row .field{flex:1}
+.book-form input,.book-form textarea{width:100%;padding:12px 15px;border-radius:11px;border:1.5px solid #DCE3F3;background:#fff;color:var(--ink);font-family:var(--body);font-size:.95rem}
+.book-form input:focus,.book-form textarea:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.book-form textarea{min-height:80px;resize:vertical;margin-bottom:18px}
+.book-form .btn-primary{width:100%}
+.tz-note{font-size:.78rem;color:var(--slate);margin:-8px 0 18px}
+
+.form-success{text-align:center;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.3);border-radius:14px;padding:32px 24px}
+.form-success h3{font-family:var(--display);font-size:1.15rem;margin-bottom:8px;color:var(--navy-800)}
+.form-success p{color:var(--slate);font-size:.95rem;margin:0}
+.form-error{background:rgba(239,96,96,.08);border:1px solid rgba(239,96,96,.35);border-radius:12px;padding:14px 18px;font-size:.88rem;color:#8a2e2e;margin-bottom:18px}
+
+footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;font-size:.88rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot-links{margin-bottom:12px;font-size:.85rem}
+.foot-links a{color:rgba(255,255,255,.75)}
+.foot-links a:hover{color:var(--teal)}
+.trademark-note{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);max-width:900px;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+
+@media (max-width:960px){.schedule-grid{grid-template-columns:1fr}.nav-links{display:none}}
+@media (max-width:560px){.form-row{flex-direction:column;gap:0}.reason-toggle{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lgLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#4F5FE8"/>
+    </linearGradient>
+    <symbol id="ne-logo" viewBox="0 0 64 64">
+      <path d="M32 3 L57 17.5 V46.5 L32 61 L7 46.5 V17.5 Z" fill="none" stroke="url(#lgLogo)" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M22 44 V21 L42 44 V21" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="50" cy="12" r="4.5" fill="#22D3EE"/>
+      <line x1="46.5" y1="14.5" x2="41" y2="18" stroke="#22D3EE" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="NursingEdge home">
+      <svg width="40" height="40" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
+      <span class="brand-name">Nursing<span>Edge</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/#modules">Platform</a>
+      <a href="/#advisory">Advisory</a>
+      <a href="/courses.html">Courses</a>
+      <a href="/team.html">Team</a>
+      <a href="/#careers">Careers</a>
+      <a class="btn btn-primary" href="/schedule.html">Schedule a call</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Book time with the founder</span>
+    <h1>Schedule a call</h1>
+    <p>Pick what you'd like to talk about and a date and time that works for you. Ahmad reviews requests personally and confirms by email within one business day.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container schedule-grid">
+
+    <div class="info-card">
+      <h3>What to expect</h3>
+      <div class="info-list">
+        <div class="info-item">
+          <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#4F5FE8" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <div><h4>30–45 minutes</h4><p>Over Zoom, Teams, or your organization's preferred platform.</p></div>
+        </div>
+        <div class="info-item">
+          <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="4" stroke="#4F5FE8" stroke-width="1.8"/></svg></span>
+          <div><h4>You'll meet Ahmad directly</h4><p>No sales layer — you're talking to the founder and, for advisory work, the consultant matched to your setting.</p></div>
+        </div>
+        <div class="info-item">
+          <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10.5 L8.5 15 L20 3.5" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h4>Confirmed by email</h4><p>This form sends a request, not an automatic booking — you'll get a confirmation with the final time and video link.</p></div>
+        </div>
+      </div>
+      <p class="alt">Prefer to just email? Write to <a href="mailto:ahmad@nursingedgeadvisory.com?subject=NursingEdge%20scheduling%20request">ahmad@nursingedgeadvisory.com</a>.</p>
+    </div>
+
+    <div class="book-card">
+      <p class="form-error" id="formError" hidden>Something went wrong sending your request — please try again, or email us directly.</p>
+
+      <form class="book-form" id="scheduleForm" action="https://formspree.io/f/xykqvpgg" method="POST">
+        <label class="field-label">What would you like to book?</label>
+        <div class="reason-toggle">
+          <input type="radio" name="reason" id="reasonDemo" value="Platform demo" checked>
+          <label for="reasonDemo"><span class="rt-title">Platform demo</span><span class="rt-sub">See NursingEdge in action</span></label>
+
+          <input type="radio" name="reason" id="reasonAdvisory" value="Magnet advisory consultation">
+          <label for="reasonAdvisory"><span class="rt-title">Magnet advisory</span><span class="rt-sub">Talk through your Magnet journey</span></label>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label class="field-label" for="prefDate">Preferred date</label>
+            <input type="date" id="prefDate" name="preferred_date" required>
+          </div>
+          <div class="field">
+            <label class="field-label" for="prefTime">Preferred time</label>
+            <input type="time" id="prefTime" name="preferred_time" required>
+          </div>
+        </div>
+        <p class="tz-note">Times are in your local timezone — we'll confirm the exact slot in an email.</p>
+
+        <div class="form-row">
+          <div class="field">
+            <label class="field-label" for="altDate">Alternate date <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
+            <input type="date" id="altDate" name="alternate_date">
+          </div>
+          <div class="field">
+            <label class="field-label" for="altTime">Alternate time <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
+            <input type="time" id="altTime" name="alternate_time">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label class="field-label" for="fullName">Full name</label>
+            <input type="text" id="fullName" name="name" required>
+          </div>
+          <div class="field">
+            <label class="field-label" for="org">Organization</label>
+            <input type="text" id="org" name="organization" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label class="field-label" for="email">Work email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label class="field-label" for="role">Title / role <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
+            <input type="text" id="role" name="title">
+          </div>
+        </div>
+
+        <label class="field-label" for="notes">Anything we should know beforehand? <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
+        <textarea id="notes" name="message" placeholder="Where you are in your Magnet journey, what you'd like to see, questions for the team…"></textarea>
+
+        <input type="hidden" name="_subject" value="NursingEdge scheduling request">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Request this time</button>
+      </form>
+
+      <div class="form-success" id="formSuccess" hidden>
+        <h3>Request sent</h3>
+        <p>Thanks — Ahmad will confirm your time by email within one business day.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <a class="brand" href="/">
+        <svg width="30" height="30" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
+        <span class="brand-name">Nursing<span style="color:var(--teal)">Edge</span></span>
+      </a>
+      <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
+      <div>© 2026 NursingEdge. All rights reserved.</div>
+    </div>
+    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> · </span><a href="/terms.html">Terms of Use</a></div>
+    <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, Pathway to Excellence<sup>&reg;</sup>, PTAP<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and NursingEdge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var dateInput = document.getElementById('prefDate');
+  var altDateInput = document.getElementById('altDate');
+  var today = new Date().toISOString().split('T')[0];
+  if(dateInput) dateInput.min = today;
+  if(altDateInput) altDateInput.min = today;
+})();
+
+(function(){
+  var form = document.getElementById('scheduleForm');
+  var successEl = document.getElementById('formSuccess');
+  var errorEl = document.getElementById('formError');
+  if(!form || !successEl || !errorEl) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errorEl.hidden = true;
+    var btn = form.querySelector('button[type="submit"]');
+    var originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res){
+      if(res.ok){
+        form.hidden = true;
+        successEl.hidden = false;
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(function(){
+      errorEl.hidden = false;
+      btn.disabled = false;
+      btn.textContent = originalText;
+    });
+  });
+})();
+</script>
+</body>
+</html>
