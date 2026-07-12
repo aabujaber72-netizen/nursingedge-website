@@ -56,7 +56,8 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 
 /* ---------- Nav ---------- */
-header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .25s ease}
+header.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.22)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff}
 .brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em}
@@ -330,8 +331,16 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 }
 @media (max-width:560px){
   .modules-grid{grid-template-columns:1fr}
-  section{padding:72px 0}
-  .hero{padding:72px 0 84px}
+  section{padding:64px 0}
+  .hero{padding:64px 0 56px}
+  .hero-proof{gap:22px}
+  .proof strong{font-size:1.25rem}
+  .hero-ctas .btn,.demo-form .btn-primary{width:100%}
+  .culture-grid,.case-grid,.problem-grid,.advisory-diff{gap:16px}
+  .founder-card,.role-card{padding:28px 24px}
+  .standards-visual{padding:36px 26px}
+  .standards-visual .big{font-size:3.2rem}
+  h1{font-size:clamp(1.9rem,8vw,2.4rem)!important}
 }
 /* ---------- Scroll reveal (progressive enhancement) ---------- */
 .js-reveal .reveal-item{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -1128,6 +1137,17 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     });
   }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
   items.forEach(function(el){ io.observe(el); });
+})();
+
+// Header shadow on scroll
+(function(){
+  var header = document.querySelector('header');
+  if(!header) return;
+  function onScroll(){
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
 })();
 
 // Mobile nav toggle

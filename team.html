@@ -42,6 +42,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-f
 .btn-primary{background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-deep) 100%);color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.35)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,95,232,.45)}
 .nav .btn{padding:10px 20px;font-size:.88rem}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:60}
+.nav-toggle span{width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 .page-hero{background:linear-gradient(160deg,var(--navy-900) 0%,var(--navy-800) 100%);color:#fff;padding:80px 0 72px;position:relative;overflow:hidden}
 .page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 380px at 85% 20%,rgba(79,95,232,.28),transparent 62%)}
@@ -75,7 +80,20 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .trademark-note{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);max-width:900px}
 
-@media (max-width:960px){.team-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
+@media (max-width:960px){
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-toggle{display:flex}
+  .nav-links{
+    position:fixed;top:72px;left:0;right:0;bottom:0;
+    background:rgba(10,19,48,.97);backdrop-filter:blur(12px);
+    flex-direction:column;align-items:flex-start;padding:28px 24px;gap:6px;
+    overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;
+    transition:opacity .25s ease,transform .25s ease;
+  }
+  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto}
+  .nav-links a{font-size:1.08rem;padding:10px 0;width:100%}
+  .nav-links .btn{width:100%;justify-content:center;margin-top:14px}
+}
 @media (max-width:600px){.team-grid{grid-template-columns:1fr}section{padding:64px 0}}
 </style>
 </head>
@@ -101,7 +119,10 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
       <svg width="40" height="40" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
       <span class="brand-name">Nursing<span>Edge</span></span>
     </a>
-    <nav class="nav-links" aria-label="Main navigation">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="mainNav" aria-label="Main navigation">
       <a href="/#modules">Platform</a>
       <a href="/#advisory">Advisory</a>
       <a href="/courses.html">Courses</a>
@@ -181,7 +202,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
   <div class="container">
     <h2>Work with the team</h2>
     <p>Tell us where you are in the Magnet journey and we'll match you with the right consultant for a discovery call.</p>
-    <a class="btn btn-primary" href="/#demo">Book a consultation</a>
+    <a class="btn btn-primary" href="/schedule.html">Book a consultation</a>
   </div>
 </section>
 
@@ -201,5 +222,24 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
   </div>
 </footer>
 
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if(!toggle || !nav) return;
+  function closeNav(){
+    nav.classList.remove('open');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded','false');
+  }
+  toggle.addEventListener('click', function(){
+    var isOpen = nav.classList.toggle('open');
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
+})();
+</script>
 </body>
 </html>
