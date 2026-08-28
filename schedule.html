@@ -97,14 +97,14 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 .foot-links{margin-bottom:12px;font-size:.85rem}
 .foot-links a{color:rgba(255,255,255,.75)}
 .foot-links a:hover{color:var(--teal)}
-.trademark-note{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);max-width:900px;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.trademark-note{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.55);max-width:900px;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
 
 @media (max-width:960px){
   .schedule-grid{grid-template-columns:1fr}
   .nav-toggle{display:flex}
   .nav-links{
-    position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);
-    background:rgba(10,19,48,.97);backdrop-filter:blur(12px);
+    position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);z-index:60;
+    background:#0A1330;
     flex-direction:column;align-items:flex-start;padding:28px 24px;gap:6px;
     overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;
     transition:opacity .25s ease,transform .25s ease;

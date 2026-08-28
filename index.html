@@ -274,7 +274,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 .foot-links{margin-bottom:12px;font-size:.85rem}
 .foot-links a{color:rgba(255,255,255,.75)}
 .foot-links a:hover{color:var(--teal)}
-.trademark-note{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);max-width:900px}
+.trademark-note{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.55);max-width:900px}
 
 /* ---------- Careers ---------- */
 .careers{background:var(--card);border-top:1px solid #E7ECF7;border-bottom:1px solid #E7ECF7}
@@ -319,8 +319,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   .standards-grid,.founder-grid{grid-template-columns:1fr;gap:44px}
   .nav-toggle{display:flex}
   .nav-links{
-    position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);
-    background:rgba(10,19,48,.97);backdrop-filter:blur(12px);
+    position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);z-index:60;
+    background:#0A1330;
     flex-direction:column;align-items:flex-start;padding:28px 24px;gap:6px;
     overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;
     transition:opacity .25s ease,transform .25s ease;
@@ -397,6 +397,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <a href="#magnet">Magnet readiness</a>
       <a href="#advisory">Advisory</a>
       <a href="courses.html">Courses</a>
+      <a href="team.html">Team</a>
       <a href="#founder">About</a>
       <a href="#careers">Careers</a>
       <a class="btn btn-primary" href="#demo">Request a demo</a>
@@ -1030,6 +1031,31 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   </div>
 </footer>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NursingEdge Advisory",
+  "url": "https://nursingedgeadvisory.com/",
+  "logo": "https://nursingedgeadvisory.com/favicon-180.png",
+  "image": "https://nursingedgeadvisory.com/og-image.png",
+  "email": "ahmad@nursingedgeadvisory.com",
+  "description": "NursingEdge unifies shared governance, Magnet accreditation readiness, quality projects, and nursing excellence into one connected platform, with hands-on Magnet advisory.",
+  "founder": {
+    "@type": "Person",
+    "name": "Ahmad Abu Jaber",
+    "jobTitle": "Founder & Principal Consultant"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "NursingEdge Advisory",
+  "url": "https://nursingedgeadvisory.com/"
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
