@@ -223,6 +223,10 @@ section{padding:96px 0}
 .check-item.todo .ck{background:var(--card);border:1.5px dashed rgba(16,28,69,.2)}
 .check-item.todo{color:var(--slate)}
 .evidence-chip{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;color:var(--slate);background:var(--card);padding:6px 12px;border-radius:8px}
+.shot{margin:0;background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(16,28,69,.16);overflow:hidden;border:1px solid rgba(16,28,69,.06)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:14px 18px;font-size:.85rem;color:var(--slate);border-top:1px solid rgba(16,28,69,.06)}
+.shot-wide{margin-bottom:32px}
 @media (max-width:960px){.preview-grid{grid-template-columns:1fr}}
 
 /* ---------- Business case ---------- */
@@ -556,54 +560,32 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   </div>
 </section>
 
-<!-- ================= PRODUCT PREVIEW (illustrative mockups) ================= -->
+<!-- ================= PRODUCT PREVIEW (real screens, sample data) ================= -->
 <section class="preview" id="preview" aria-labelledby="preview-title">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow dark">A closer look</span>
       <h2 id="preview-title">What the work actually looks like</h2>
-      <p>How councils, stories, and evidence come together in NursingEdge.</p>
+      <p>Real NursingEdge screens, shown with a sample hospital's data.</p>
     </div>
+    <figure class="shot shot-wide reveal-item">
+      <div class="mockup-titlebar" aria-hidden="true"><span></span><span></span><span></span><b>Executive dashboard</b></div>
+      <img src="images/screens/dashboard.jpg" width="1440" height="900" loading="lazy" alt="NursingEdge executive dashboard showing Magnet readiness at 23.8 percent, Big Five empirical outcomes with 17 of 19 measures on track, and tiles for councils, stories and action items">
+      <figcaption>Magnet readiness and the five empirical outcome areas in one view, updated as councils and units do the work.</figcaption>
+    </figure>
     <div class="preview-grid">
-
-      <div class="mockup reveal-item" aria-hidden="true">
-        <div class="mockup-titlebar"><span></span><span></span><span></span><b>Real-time dashboard</b><span class="live-pill">Example</span></div>
-        <div class="mockup-body">
-          <p class="mh">Governance &amp; readiness overview</p>
-          <div class="kpi-row">
-            <div class="kpi"><b>12</b><span>Active councils</span></div>
-            <div class="kpi"><b>8</b><span>Stories in progress</span></div>
-            <div class="kpi"><b>3</b><span>Actions overdue</span></div>
-          </div>
-          <div class="bars">
-            <i style="height:40%"></i><i style="height:65%"></i><i style="height:35%"></i>
-            <i style="height:80%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:45%"></i>
-          </div>
-          <div class="feed">
-            <div class="feed-item"><span class="fdot"></span>Unit Practice Council approved new fall-risk protocol</div>
-            <div class="feed-item"><span class="fdot"></span>SE10EOa narrative drafted, 3 of 5 evidence items attached</div>
-            <div class="feed-item"><span class="fdot"></span>Clinical ladder portfolio submitted — Sarah M.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mockup reveal-item" aria-hidden="true">
-        <div class="mockup-titlebar"><span></span><span></span><span></span><b>Magnet story builder</b><span class="live-pill"><i></i>Draft</span></div>
-        <div class="mockup-body">
-          <span class="standard-chip">SE10EOa &middot; Structural Empowerment</span>
-          <p class="mh">Shared governance drives unit-level change</p>
-          <div class="progress-track"><div class="progress-fill"></div></div>
-          <div class="checklist">
-            <div class="check-item"><span class="ck">✓</span>Narrative mapped to the Source of Evidence</div>
-            <div class="check-item"><span class="ck">✓</span>Outcome data linked</div>
-            <div class="check-item todo"><span class="ck"></span>Named approval pending</div>
-          </div>
-          <span class="evidence-chip">📎 3 evidence files attached</span>
-        </div>
-      </div>
-
+      <figure class="shot reveal-item">
+        <div class="mockup-titlebar" aria-hidden="true"><span></span><span></span><span></span><b>Magnet narrative with named approval</b></div>
+        <img src="images/screens/magnet-story-approval.jpg" width="1400" height="509" loading="lazy" alt="A Magnet empirical outcome narrative, approved by the Magnet Program Director, with a passed compliance check and the problem, intervention and outcome sections">
+        <figcaption>Every narrative is written by your nurses and needs a named approval before export.</figcaption>
+      </figure>
+      <figure class="shot reveal-item">
+        <div class="mockup-titlebar" aria-hidden="true"><span></span><span></span><span></span><b>Outcome data exhibit</b></div>
+        <img src="images/screens/data-exhibit.jpg" width="1400" height="631" loading="lazy" alt="Line chart of a unit's CAUTI rate over eight quarters falling below the NDNQI national mean after a nurse-led intervention">
+        <figcaption>Eight quarters of unit data against the benchmark, with the intervention marked.</figcaption>
+      </figure>
     </div>
-    <p class="preview-caption">Illustrative screens. A live walkthrough is part of the free readiness call.</p>
+    <p class="preview-caption">Sample data only; no real hospital or patient information. A live walkthrough is part of the free readiness call.</p>
   </div>
 </section>
 
