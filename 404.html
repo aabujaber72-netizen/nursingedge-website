@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found | NursingEdge</title>
+<title>Nursing Edge Advisory | Page not found</title>
 <meta name="description" content="The page you were looking for could not be found.">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -35,6 +35,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-f
 .brand{display:flex;align-items:center;gap:12px;color:#fff}
 .brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem}
 .brand-name span{color:var(--teal)}
+.brand-lockup{display:flex;flex-direction:column;line-height:1}
+.brand-lockup .brand-name{line-height:1.05}
+.brand-sub{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#C7D0EA;margin-top:4px;padding-left:1px}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;white-space:nowrap;transition:color .2s}
 .nav-links a:hover{color:var(--teal)}
@@ -118,9 +121,9 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 
 <header>
   <div class="container nav">
-    <a class="brand" href="/" aria-label="NursingEdge home">
+    <a class="brand" href="/" aria-label="Nursing Edge Advisory home">
       <svg width="40" height="40" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
-      <span class="brand-name">Nursing<span>Edge</span></span>
+      <span class="brand-lockup"><span class="brand-name">Nursing<span>Edge</span></span><span class="brand-sub">Advisory</span></span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
       <span></span><span></span><span></span>
@@ -130,7 +133,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
       <a href="/index.html#advisory">Advisory</a>
       <a href="/courses.html">Courses</a>
       <a href="/team.html">Team</a>
-      <a class="btn btn-primary" href="/schedule.html">Schedule a call</a>
+      <a class="btn btn-primary" href="/schedule.html">Book a free readiness call</a>
     </nav>
   </div>
 </header>
@@ -141,10 +144,10 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
   <div class="container">
     <div class="code" aria-hidden="true">404</div>
     <h1>We couldn't find that page</h1>
-    <p>The link may be out of date, or the page may have moved. You can head back to the home page or book a time to talk with us.</p>
+    <p>The link may be out of date, or the page may have moved. You can head back to the home page or book a free readiness call.</p>
     <div class="ctas">
       <a class="btn btn-primary" href="/">Go to the home page</a>
-      <a class="btn btn-ghost" href="/schedule.html">Schedule a call</a>
+      <a class="btn btn-ghost" href="/schedule.html">Book a free readiness call</a>
     </div>
   </div>
 </div>
@@ -155,14 +158,14 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
   <div class="container">
     <div class="foot">
       <a class="brand" href="/">
-        <svg width="30" height="30" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
-        <span class="brand-name">Nursing<span style="color:var(--teal)">Edge</span></span>
+        <svg width="30" height="30" aria-hidden="true" focusable="false"><use href="#ne-logo"/></svg>
+        <span class="brand-lockup"><span class="brand-name">Nursing<span>Edge</span></span><span class="brand-sub">Advisory</span></span>
       </a>
       <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
       <div class="foot-copy">&copy; 2026 Nursing Edge Advisory LLC &middot; New Mexico, USA<br><a href="mailto:info@nursingedgeadvisory.com">info@nursingedgeadvisory.com</a> &middot; <a href="tel:+17262551056">(726) 255-1056</a></div>
     </div>
-    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> &middot; </span><a href="/terms.html">Terms of Use</a></div>
-    <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, Pathway to Excellence<sup>&reg;</sup>, PTAP<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and NursingEdge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
+    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> &middot; </span><a href="/terms.html">Terms of Use</a><span aria-hidden="true"> &middot; </span><a href="/careers.html">Careers</a></div>
+    <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and Nursing Edge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
   </div>
 </footer>
 
