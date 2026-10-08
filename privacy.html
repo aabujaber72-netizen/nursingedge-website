@@ -144,7 +144,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 <ul>
 <li><strong>Information you send through our forms.</strong> Our forms collect your name, work email, organization, role, preferred dates and times, message, focus area, and time zone. We do not ask for a phone number.</li>
 <li><strong>Platform account and usage data</strong> for customers using NursingEdge, including governance, quality, and clinical ladder records entered by your organization's users.</li>
-<li><strong>Server logs.</strong> We do not use analytics or advertising tools on this website. Our hosting provider keeps standard server logs (such as IP address, browser type, and the pages requested) to run and secure the site.</li>
+<li><strong>Analytics, only with your permission.</strong> If you choose "Allow analytics" in the cookie notice, we use Google Analytics 4 to count visits and see which pages and links are used. It sets cookies and collects information such as pages viewed, approximate location, device and browser type. If you choose "No thanks", Google Analytics is not loaded. You can change your choice at any time with the "Cookie settings" link at the bottom of every page. We do not use advertising tools.</li>
+<li><strong>Server logs.</strong> Our hosting provider keeps standard server logs (such as IP address, browser type, and the pages requested) to run and secure the site.</li>
 </ul>
 
 <h2>3. How we use information</h2>
@@ -166,7 +167,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 <p>We do not sell personal information. We use these service providers to run this website:</p>
 <ul>
 <li><strong>Formspree</strong>, to deliver form submissions to us by email.</li>
-<li><strong>Render</strong>, to host this website and the NursingEdge platform in the US.</li>
+<li><strong>Render</strong>, to host this website and the NursingEdge platform. The platform's servers are in the EU (Frankfurt, Germany).</li>
+<li><strong>Google Analytics</strong>, to measure website use, only if you allow analytics cookies.</li>
 <li><strong>Google Fonts</strong>, to deliver the fonts used on this website. Your browser requests the fonts from Google, which receives your IP address.</li>
 </ul>
 <p>We may also share information where the law requires it.</p>
@@ -190,7 +192,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
       <div class="foot-copy">&copy; 2026 Nursing Edge Advisory LLC &middot; New Mexico, USA<br><a href="mailto:info@nursingedgeadvisory.com">info@nursingedgeadvisory.com</a> &middot; <a href="tel:+17262551056">(726) 255-1056</a></div>
     </div>
-    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> &middot; </span><a href="/terms.html">Terms of Use</a><span aria-hidden="true"> &middot; </span><a href="/careers.html">Careers</a></div>
+    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> &middot; </span><a href="/terms.html">Terms of Use</a><span aria-hidden="true"> &middot; </span><a href="/careers.html">Careers</a><span aria-hidden="true"> &middot; </span><a href="#" data-cookie-settings>Cookie settings</a></div>
     <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and Nursing Edge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
   </div>
 </footer>
@@ -214,5 +216,6 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
 })();
 </script>
+<script src="/analytics.js" defer></script>
 </body>
 </html>
