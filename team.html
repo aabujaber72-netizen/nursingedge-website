@@ -4,8 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Team — NursingEdge Advisory</title>
-<meta name="description" content="The NursingEdge Advisory team: practicing Magnet program directors and nurse leaders from leading hospitals across the Middle East, led by an accreditation surveyor.">
+<meta name="description" content="The NursingEdge Advisory team: practicing Magnet program directors and nurse leaders from leading hospitals across the Middle East, led by a former CBAHI nursing surveyor.">
 <link rel="canonical" href="https://nursingedgeadvisory.com/team.html">
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nursingedgeadvisory.com/team.html">
+<meta property="og:title" content="Our Team — NursingEdge Advisory">
+<meta property="og:description" content="The NursingEdge Advisory team: practicing Magnet program directors and nurse leaders from leading hospitals across the Middle East, led by a former CBAHI nursing surveyor.">
+<meta property="og:image" content="https://nursingedgeadvisory.com/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Team — NursingEdge Advisory">
+<meta name="twitter:description" content="The NursingEdge Advisory team: practicing Magnet program directors and nurse leaders from leading hospitals across the Middle East, led by a former CBAHI nursing surveyor.">
+<meta name="twitter:image" content="https://nursingedgeadvisory.com/og-image.png">
+
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
@@ -31,17 +44,17 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 
 header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:40px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff}
 .brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem}
 .brand-name span{color:var(--teal)}
 .nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;white-space:nowrap;transition:color .2s}
 .nav-links a:hover{color:var(--teal)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:12px;transition:transform .18s ease,box-shadow .18s ease;cursor:pointer;border:none}
 .btn-primary{background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-deep) 100%);color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.35)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,95,232,.45)}
-.nav .btn{padding:10px 20px;font-size:.88rem}
+.nav .btn{padding:10px 20px;font-size:.88rem;white-space:nowrap}
 .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:60}
 .nav-toggle span{width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
 .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -76,26 +89,42 @@ section{padding:88px 0}
 
 footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;font-size:.88rem}
 .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot-links{margin-top:20px;font-size:.85rem}
+.foot-links a{color:rgba(255,255,255,.75)}
+.foot-links a:hover{color:var(--teal)}
 .trademark-note{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.55);max-width:900px}
 
 @media (max-width:960px){
   .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){.team-grid{grid-template-columns:1fr}section{padding:64px 0}}
+
+/* ---------- Mobile menu (switches at 1100px) ---------- */
+@media (max-width:1100px){
   .nav-toggle{display:flex}
   .nav-links{
     position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);z-index:60;
     background:#0A1330;
     flex-direction:column;align-items:flex-start;padding:28px 24px;gap:6px;
-    overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;
-    transition:opacity .25s ease,transform .25s ease;
+    overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;visibility:hidden;
+    transition:opacity .25s ease,transform .25s ease,visibility 0s linear .25s;
   }
-  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto}
+  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto;visibility:visible;transition:opacity .25s ease,transform .25s ease,visibility 0s linear 0s}
   .nav-links a{font-size:1.08rem;padding:10px 0;width:100%}
   .nav-links .btn{width:100%;justify-content:center;margin-top:14px}
 }
-@media (max-width:600px){.team-grid{grid-template-columns:1fr}section{padding:64px 0}}
+
+/* ---------- Accessibility helpers ---------- */
+.skip-link{position:absolute;left:16px;top:-100px;z-index:200;background:#fff;color:#16213E;font-family:var(--display);font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+.skip-link:focus{top:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Footer contact line */
+.foot-copy a{color:rgba(255,255,255,.8);text-decoration:none}
+.foot-copy a:hover{color:var(--teal)}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -121,17 +150,16 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
       <span></span><span></span><span></span>
     </button>
     <nav class="nav-links" id="mainNav" aria-label="Main navigation">
-      <a href="/#modules">Platform</a>
-      <a href="/#advisory">Advisory</a>
+      <a href="index.html#modules">Platform</a>
+      <a href="index.html#advisory">Advisory</a>
       <a href="/courses.html">Courses</a>
       <a href="/team.html">Team</a>
-      <a href="/#careers">Careers</a>
       <a class="btn btn-primary" href="/schedule.html">Schedule a call</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <div class="page-hero">
   <div class="container">
@@ -152,7 +180,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
         <div class="avatar">AA</div>
         <h3>Ahmad Abu Jaber</h3>
         <div class="role">Founder &amp; Principal Consultant</div>
-        <p>Nurse and quality leader with 17+ years across leading institutions, including nine years as a CBAHI nursing surveyor. Built the NursingEdge platform to make Magnet readiness a byproduct of daily work.</p>
+        <p>Nurse and quality leader with 17+ years in nursing quality and patient safety. Nine years as a CBAHI nursing surveyor across 91 hospitals. Former Head of Quality Improvement and Accreditation, Security Forces Hospital, Dammam. Quality roles at Johns Hopkins Aramco Healthcare and King Hussein Cancer Center. Built the NursingEdge platform to make Magnet readiness a byproduct of daily work.</p>
+        <p style="margin-top:10px">RN, MHSM, CPHQ (NAHQ), CPPS (CBPPS), CPHRM (AHA Certification Center).</p>
         <div class="creds">
           <span class="cred">RN</span><span class="cred">MHSM</span><span class="cred">CPHQ</span><span class="cred">CPPS</span><span class="cred">CPHRM</span>
         </div>
@@ -182,7 +211,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
       <div class="member">
         <h3>Quality and patient safety</h3>
         <div class="role">Nurse-sensitive indicators, safety culture, outcome data</div>
-        <p>Quality and safety leaders working on NDNQI-equivalent indicator sets, benchmarking, and safety culture programs. They cover the outcome-data side of the standards, where most applications lose points.</p>
+        <p>Quality and safety leaders working on NDNQI-equivalent indicator sets, benchmarking, and safety culture programs. They cover the outcome-data side of the standards, which is often the hardest part of the written documentation to get right.</p>
       </div>
     </div>
   </div>
@@ -206,8 +235,9 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
         <span class="brand-name">Nursing<span style="color:var(--teal)">Edge</span></span>
       </a>
       <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
-      <div>© 2026 NursingEdge. All rights reserved.</div>
+      <div class="foot-copy">&copy; 2026 Nursing Edge Advisory LLC &middot; New Mexico, USA<br><a href="mailto:info@nursingedgeadvisory.com">info@nursingedgeadvisory.com</a> &middot; <a href="tel:+17262551056">(726) 255-1056</a></div>
     </div>
+    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> &middot; </span><a href="/terms.html">Terms of Use</a></div>
     <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, Pathway to Excellence<sup>&reg;</sup>, PTAP<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and NursingEdge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
   </div>
 </footer>

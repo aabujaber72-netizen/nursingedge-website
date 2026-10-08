@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NursingEdge — Nursing Excellence Platform &amp; Magnet Advisory</title>
-<meta name="description" content="NursingEdge unifies shared governance, Magnet accreditation readiness, quality projects, and nursing excellence into one connected, traceable, AI-powered platform — with hands-on Magnet advisory from the surveyor who built it.">
+<meta name="description" content="NursingEdge unifies shared governance, Magnet designation readiness, quality projects, and nursing excellence into one connected, traceable, AI-powered platform — with hands-on Magnet advisory from a former CBAHI nursing surveyor.">
 <link rel="canonical" href="https://nursingedgeadvisory.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nursingedgeadvisory.com/">
 <meta property="og:title" content="NursingEdge — Nursing Excellence Platform & Magnet Advisory">
-<meta property="og:description" content="NursingEdge unifies shared governance, Magnet accreditation readiness, quality projects, and nursing excellence into one connected, traceable, AI-powered platform — with hands-on Magnet advisory from the surveyor who built it.">
+<meta property="og:description" content="NursingEdge unifies shared governance, Magnet designation readiness, quality projects, and nursing excellence into one connected, traceable, AI-powered platform — with hands-on Magnet advisory from a former CBAHI nursing surveyor.">
 <meta property="og:image" content="https://nursingedgeadvisory.com/og-image.png">
 
 <!-- Twitter -->
@@ -58,19 +58,19 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
 /* ---------- Nav ---------- */
 header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .25s ease}
 header.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.22)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:40px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff}
 .brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em}
 .brand-name span{color:var(--teal)}
 .nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;white-space:nowrap;transition:color .2s}
 .nav-links a:hover{color:var(--teal)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:12px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;border:none}
 .btn-primary{background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-deep) 100%);color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.35)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,95,232,.45)}
 .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(34,211,238,.5)}
 .btn-ghost:hover{background:rgba(34,211,238,.1);border-color:var(--teal)}
-.nav .btn{padding:10px 20px;font-size:.88rem}
+.nav .btn{padding:10px 20px;font-size:.88rem;white-space:nowrap}
 .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:60}
 .nav-toggle span{width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
 .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -114,6 +114,7 @@ section{padding:96px 0}
 /* Advisory */
 .advisory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .advisory-diff{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px;padding-top:44px;border-top:1px solid #E7ECF7}
+.advisory-note{margin-top:32px;font-size:.8rem;line-height:1.55;color:var(--slate);max-width:760px}
 @media (max-width:960px){.advisory-grid{grid-template-columns:repeat(2,1fr)}.advisory-diff{grid-template-columns:1fr}}
 @media (max-width:560px){.advisory-grid{grid-template-columns:1fr}}
 
@@ -235,10 +236,11 @@ section{padding:96px 0}
 @media (max-width:960px){.case-grid{grid-template-columns:1fr}}
 
 
-.founder-card h3{font-size:1.4rem;margin-bottom:6px}
+.founder-card .founder-name{font-family:var(--display);font-weight:700;line-height:1.15;letter-spacing:-.01em;font-size:1.4rem;margin-bottom:6px}
 .founder-card .role{color:rgba(255,255,255,.7);font-size:.95rem}
 .founder-copy p{color:var(--slate);margin-bottom:18px;font-size:1.02rem}
 .founder-copy p strong{color:var(--navy-800)}
+.founder-copy p.founder-record{font-size:.95rem;padding-top:18px;border-top:1px solid #E7ECF7;margin-bottom:0}
 
 /* CTA */
 .cta{background:linear-gradient(140deg,var(--navy-900) 0%,var(--indigo-deep) 120%);color:#fff;text-align:center;position:relative;overflow:hidden}
@@ -317,17 +319,6 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   .chain{grid-template-columns:1fr}
   .chain-step{border-left:1px solid rgba(34,211,238,.28)}
   .standards-grid,.founder-grid{grid-template-columns:1fr;gap:44px}
-  .nav-toggle{display:flex}
-  .nav-links{
-    position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);z-index:60;
-    background:#0A1330;
-    flex-direction:column;align-items:flex-start;padding:28px 24px;gap:6px;
-    overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;
-    transition:opacity .25s ease,transform .25s ease;
-  }
-  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto}
-  .nav-links a{font-size:1.08rem;padding:10px 0;width:100%}
-  .nav-links .btn{width:100%;justify-content:center;margin-top:14px}
 }
 @media (max-width:560px){
   .modules-grid{grid-template-columns:1fr}
@@ -353,9 +344,33 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   *{transition:none!important;animation:none!important}
   html{scroll-behavior:auto}
 }
+
+/* ---------- Mobile menu (switches at 1100px) ---------- */
+@media (max-width:1100px){
+  .nav-toggle{display:flex}
+  .nav-links{
+    position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);z-index:60;
+    background:#0A1330;
+    flex-direction:column;align-items:flex-start;padding:28px 24px;gap:6px;
+    overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;visibility:hidden;
+    transition:opacity .25s ease,transform .25s ease,visibility 0s linear .25s;
+  }
+  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto;visibility:visible;transition:opacity .25s ease,transform .25s ease,visibility 0s linear 0s}
+  .nav-links a{font-size:1.08rem;padding:10px 0;width:100%}
+  .nav-links .btn{width:100%;justify-content:center;margin-top:14px}
+}
+
+/* ---------- Accessibility helpers ---------- */
+.skip-link{position:absolute;left:16px;top:-100px;z-index:200;background:#fff;color:#16213E;font-family:var(--display);font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+.skip-link:focus{top:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Footer contact line */
+.foot-copy a{color:rgba(255,255,255,.8);text-decoration:none}
+.foot-copy a:hover{color:var(--teal)}
 </style>
 </head>
-<body>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ======================================================
      LOGO — inline SVG, easy to adjust.
@@ -392,20 +407,15 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     </button>
     <nav class="nav-links" id="mainNav" aria-label="Main navigation">
       <a href="#modules">Platform</a>
-      <a href="#preview">Preview</a>
-      <a href="#traceability">How it works</a>
-      <a href="#magnet">Magnet readiness</a>
       <a href="#advisory">Advisory</a>
       <a href="courses.html">Courses</a>
       <a href="team.html">Team</a>
-      <a href="#founder">About</a>
-      <a href="#careers">Careers</a>
       <a class="btn btn-primary" href="#demo">Request a demo</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
 <!-- ================= HERO ================= -->
 <section class="hero" aria-labelledby="hero-title" style="padding-top:88px">
@@ -422,7 +432,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     <div>
       <span class="eyebrow">Nursing Excellence &amp; Governance Platform</span>
       <h1 id="hero-title">Everything connected.<br>Everything traceable.<br><em>Magnet-ready, every day.</em></h1>
-      <p class="lead">NursingEdge unifies shared governance, meeting minutes, Magnet stories, quality projects, and the clinical ladder into one AI-powered platform — so the daily work of nursing becomes living evidence for accreditation.</p>
+      <p class="lead">NursingEdge unifies shared governance, meeting minutes, Magnet stories, quality projects, and the clinical ladder into one AI-powered platform — so the daily work of nursing becomes living evidence for Magnet designation.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#demo">Request a demo</a>
         <a class="btn btn-ghost" href="#advisory">Magnet advisory</a>
@@ -497,7 +507,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <div class="problem-card reveal-item">
         <span class="tag">Before</span>
         <h3>Document scramble at deadline</h3>
-        <p>Teams spend months reconstructing what already happened — chasing signatures, dates, and outcomes for the Document of Evidence.</p>
+        <p>Teams spend months reconstructing what already happened — chasing signatures, dates, and outcomes for the written documentation.</p>
       </div>
       <div class="problem-card reveal-item">
         <span class="tag">Before</span>
@@ -595,7 +605,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
           </div>
           <div class="feed">
             <div class="feed-item"><span class="fdot"></span>Unit Practice Council approved new fall-risk protocol</div>
-            <div class="feed-item"><span class="fdot"></span>EP7EO story mapped — 3 exemplars attached</div>
+            <div class="feed-item"><span class="fdot"></span>SE10EOa narrative drafted, 3 of 5 evidence items attached</div>
             <div class="feed-item"><span class="fdot"></span>Clinical ladder portfolio submitted — Sarah M.</div>
           </div>
         </div>
@@ -604,7 +614,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <div class="mockup reveal-item" aria-hidden="true">
         <div class="mockup-titlebar"><span></span><span></span><span></span><b>Magnet story builder</b><span class="live-pill"><i></i>Draft</span></div>
         <div class="mockup-body">
-          <span class="standard-chip">EP22EO &middot; Structural Empowerment</span>
+          <span class="standard-chip">SE10EOa &middot; Structural Empowerment</span>
           <h4>Shared governance drives unit-level change</h4>
           <div class="progress-track"><div class="progress-fill"></div></div>
           <div class="checklist">
@@ -626,8 +636,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">How it works</span>
-      <h2 id="trace-title">From daily activity to accreditation evidence</h2>
-      <p>NursingEdge builds the evidence chain automatically, so nothing needs to be reconstructed at survey time.</p>
+      <h2 id="trace-title">From daily activity to Magnet designation evidence</h2>
+      <p>NursingEdge builds the evidence chain automatically, so nothing needs to be reconstructed at site visit.</p>
     </div>
     <div class="chain">
       <div class="chain-step">
@@ -644,7 +654,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       </div>
       <div class="chain-step">
         <h3>Prove</h3>
-        <p>Stories, exports, and dashboards deliver survey-ready evidence with a full, auditable trail behind every claim.</p>
+        <p>Stories, exports, and dashboards deliver appraiser-ready evidence with a full, auditable trail behind every claim.</p>
       </div>
     </div>
   </div>
@@ -657,7 +667,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <div class="section-head" style="margin-bottom:36px">
         <span class="eyebrow dark">Magnet readiness</span>
         <h2 id="magnet-title">Built on the standards, not around them</h2>
-        <p>NursingEdge was designed by an accreditation surveyor — the ANCC framework isn't a checklist bolted on, it's the platform's skeleton.</p>
+        <p>NursingEdge was designed by a nurse quality leader who spent nine years as a CBAHI nursing surveyor across 91 hospitals. The ANCC framework isn't a checklist bolted on; it's the platform's skeleton.</p>
         <p style="margin-top:10px;font-size:.92rem;color:var(--slate)"><em>Built for Magnet<sup>&reg;</sup> first. Pathway to Excellence<sup>&reg;</sup> and PTAP<sup>&reg;</sup> support are on the roadmap.</em></p>
       </div>
       <div class="standards-list">
@@ -671,7 +681,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
         </div>
         <div class="std-item reveal-item">
           <span class="dot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 L8.5 15 L16 5.5" fill="none" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><h3>Survey-ready exports</h3><p>Polished PDF exports for stories, A3 projects, EBP, and research — formatted for reviewers.</p></div>
+          <div><h3>Exports that follow the manual's narrative structure</h3><p>Polished PDF exports for stories, A3 projects, EBP, and research — formatted for appraisers.</p></div>
         </div>
         <div class="std-item reveal-item">
           <span class="dot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 L8.5 15 L16 5.5" fill="none" stroke="#4F5FE8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -704,8 +714,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <div class="case-card reveal-item" style="--accent:linear-gradient(90deg,#22D3EE,#4F5FE8)">
         <span class="case-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="#22D3EE" stroke-width="1.8"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg></span>
         <span class="num">$60,090</span>
-        <p>Average cost of turnover for a single staff RN, driven by orientation costs and lost productivity.</p>
-        <span class="src">Source: <a href="https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf" target="_blank" rel="noopener">2026 NSI National Health Care Retention &amp; RN Staffing Report</a></span>
+        <p>Average cost of turnover for a bedside RN.</p>
+        <span class="src">Source: <a href="https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf" target="_blank" rel="noopener">NSI 2026 National Health Care Retention &amp; RN Staffing Report</a></span>
       </div>
       <div class="case-card reveal-item" style="--accent:linear-gradient(90deg,#4F5FE8,#8B5CF6)">
         <span class="case-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17 L9 11 L13 15 L21 6" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6 H21 V12" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -730,13 +740,13 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     <div class="section-head">
       <span class="eyebrow dark">NursingEdge Advisory</span>
       <h2 id="advisory-title">A full menu of consulting services — plus the platform behind them</h2>
-      <p>A nurse-led team of expert consultants — Magnet program directors and nurse leaders serving in leading hospitals across the Middle East, led by an accreditation surveyor. Every engagement runs on NursingEdge, so when the consulting ends, a working evidence system stays behind.</p>
+      <p>A nurse-led team of expert consultants — Magnet program directors and nurse leaders serving in leading hospitals across the Middle East, led by a former CBAHI nursing surveyor. Every engagement runs on NursingEdge, so when the consulting ends, a working evidence system stays behind.</p>
     </div>
     <div class="advisory-grid">
       <div class="problem-card reveal-item">
         <span class="tag">Consulting</span>
         <h3>Magnet<sup>&reg;</sup> consulting</h3>
-        <p>End-to-end guidance through every phase: readiness assessment, gap analysis, application, Document of Evidence, and designation.</p>
+        <p>End-to-end guidance through every phase: readiness assessment, gap analysis, application, written documentation, and designation.</p>
       </div>
       <div class="problem-card reveal-item">
         <span class="tag">Consulting</span>
@@ -750,7 +760,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       </div>
       <div class="problem-card reveal-item">
         <span class="tag">Consulting</span>
-        <h3>Document of Evidence writing</h3>
+        <h3>Written documentation</h3>
         <p>Story and narrative development mapped to the standards — appraiser-ready exemplars written with your teams, not for them.</p>
       </div>
       <div class="problem-card reveal-item">
@@ -770,8 +780,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       </div>
       <div class="problem-card reveal-item">
         <span class="tag">Consulting</span>
-        <h3>Mock appraisal &amp; site-visit prep</h3>
-        <p>A surveyor's-eye review before the real one: document audit, unit rounding simulation, and staff interview coaching.</p>
+        <h3>Mock document review &amp; site-visit prep</h3>
+        <p>Mock document review and site-visit preparation, informed by nine years of CBAHI surveying. Includes unit rounding simulation and practice sessions so clinical nurses can describe their own work in their own words.</p>
       </div>
     </div>
     <div class="advisory-diff">
@@ -788,6 +798,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
         <div><h3>Regional depth, global standards</h3><p>ANCC frameworks applied with a working knowledge of Middle East health systems, cultures, and regulators.</p></div>
       </div>
     </div>
+    <p class="advisory-note">Designation decisions rest solely with the ANCC Commission on Magnet Recognition. Accreditation decisions rest with the accrediting body. We do not guarantee designation, accreditation, survey or exam outcomes.</p>
     <div class="hero-ctas" style="margin-top:44px;justify-content:center">
       <a class="btn btn-primary" href="#demo">Book a consultation</a>
     </div>
@@ -836,17 +847,18 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   <div class="container founder-grid">
     <div class="founder-card">
       <svg width="52" height="52" role="img" aria-label="NursingEdge logo"><use href="#ne-logo"/></svg>
-      <h3 style="margin-top:22px">Ahmad Abu Jaber</h3>
+      <p class="founder-name" style="margin-top:22px">Ahmad Abu Jaber</p>
       <div class="role">Founder — Nurse, Quality Leader, Accreditation Surveyor</div>
       <div class="creds">
-        <span class="cred" title="Registered Nurse">RN</span><span class="cred" title="Master of Health Sector Management">MHSM</span><span class="cred" title="Certified Professional in Healthcare Quality">CPHQ</span><span class="cred" title="Certified Professional in Patient Safety">CPPS</span><span class="cred" title="Certified Professional in Healthcare Risk Management">CPHRM</span>
+        <span class="cred" title="Registered Nurse">RN</span><span class="cred" title="Master of Health Sector Management">MHSM</span><span class="cred" title="Certified Professional in Healthcare Quality (NAHQ)">CPHQ</span><span class="cred" title="Certified Professional in Patient Safety (CBPPS)">CPPS</span><span class="cred" title="Certified Professional in Healthcare Risk Management (AHA Certification Center)">CPHRM</span>
       </div>
     </div>
     <div class="founder-copy">
       <span class="eyebrow dark">Why NursingEdge exists</span>
       <h2 id="founder-title" style="font-size:clamp(1.7rem,3vw,2.3rem);margin:14px 0 20px">Built by someone who lived the problem</h2>
-      <p>After <strong>17+ years</strong> in nursing quality, patient safety, and accreditation — across leading institutions including nine years as a CBAHI nursing surveyor — one frustration kept repeating: the evidence of nursing excellence existed everywhere, but never in one place.</p>
+      <p>After <strong>17+ years</strong> in nursing quality, patient safety, and accreditation, one frustration kept repeating: the evidence of nursing excellence existed everywhere, but never in one place.</p>
       <p>So he learned to code and built the platform he always needed: one hub where governance, quality, and professional development connect — and where <strong>Magnet readiness is a byproduct of daily work</strong>, not a last-minute scramble.</p>
+      <p class="founder-record"><strong>Nine years as a CBAHI nursing surveyor across 91 hospitals.</strong> Former Head of Quality Improvement and Accreditation, Security Forces Hospital, Dammam. Quality roles at Johns Hopkins Aramco Healthcare and King Hussein Cancer Center. RN, MHSM, CPHQ (NAHQ), CPPS (CBPPS), CPHRM (AHA Certification Center).</p>
     </div>
   </div>
 </section>
@@ -976,20 +988,21 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     <h2 id="cta-title">See your nursing excellence, connected</h2>
     <p>Book a live platform walkthrough, a Magnet readiness consultation, or both — for your nursing leadership, Magnet program team, or quality department.</p>
 
-    <p class="form-error" id="formError" hidden>Something went wrong sending your request — please try again, or email us directly below.</p>
+    <p class="form-error" id="formError" role="alert" hidden>Something went wrong sending your request — please try again, or email us directly below.</p>
 
     <form class="demo-form" id="demoForm" action="https://formspree.io/f/xykqvpgg" method="POST">
       <div class="form-row">
-        <div class="field"><input type="text" name="name" placeholder="Full name" required></div>
-        <div class="field"><input type="text" name="organization" placeholder="Organization" required></div>
+        <div class="field"><label class="sr-only" for="demoName">Full name</label><input type="text" id="demoName" name="name" placeholder="Full name" autocomplete="name" required></div>
+        <div class="field"><label class="sr-only" for="demoOrg">Organization</label><input type="text" id="demoOrg" name="organization" placeholder="Organization" autocomplete="organization" required></div>
       </div>
       <div class="form-row">
-        <div class="field"><input type="email" name="email" placeholder="Work email" required></div>
-        <div class="field"><input type="text" name="title" placeholder="Title / role"></div>
+        <div class="field"><label class="sr-only" for="demoEmail">Work email</label><input type="email" id="demoEmail" name="email" placeholder="Work email" autocomplete="email" required></div>
+        <div class="field"><label class="sr-only" for="demoTitle">Title / role</label><input type="text" id="demoTitle" name="title" placeholder="Title / role" autocomplete="organization-title"></div>
       </div>
       <div class="form-row">
         <div class="field">
-          <select name="interest" aria-label="I'm interested in" required>
+          <label class="sr-only" for="demoInterest">I'm interested in</label>
+          <select id="demoInterest" name="interest" required>
             <option value="" disabled selected>I'm interested in…</option>
             <option>Platform demo</option>
             <option>Magnet advisory &amp; consulting</option>
@@ -997,14 +1010,15 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
           </select>
         </div>
       </div>
-      <textarea name="message" placeholder="Tell us about your goals or where you are in the Magnet journey" rows="3"></textarea>
+      <label class="sr-only" for="demoMessage">Your goals or where you are in the Magnet journey</label>
+      <textarea id="demoMessage" name="message" placeholder="Tell us about your goals or where you are in the Magnet journey" rows="3"></textarea>
       <input type="hidden" name="_subject" value="NursingEdge demo / consultation request">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <button type="submit" class="btn btn-primary">Request a demo</button>
     </form>
 
-    <div class="form-success" id="formSuccess" hidden>
-      <h3>Request received</h3>
+    <div class="form-success" id="formSuccess" role="status" hidden>
+      <h3 tabindex="-1">Request received</h3>
       <p>Thanks — we'll follow up soon to schedule your walkthrough.</p>
     </div>
 
@@ -1022,7 +1036,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
         <span class="brand-name">Nursing<span style="color:var(--teal)">Edge</span></span>
       </a>
       <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
-      <div>© 2026 NursingEdge. All rights reserved.</div>
+      <div class="foot-copy">&copy; 2026 Nursing Edge Advisory LLC &middot; New Mexico, USA<br><a href="mailto:info@nursingedgeadvisory.com">info@nursingedgeadvisory.com</a> &middot; <a href="tel:+17262551056">(726) 255-1056</a></div>
     </div>
     <div class="foot-legal">
       <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> · </span><a href="/terms.html">Terms of Use</a></div>
@@ -1036,15 +1050,24 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "NursingEdge Advisory",
+  "legalName": "Nursing Edge Advisory LLC",
   "url": "https://nursingedgeadvisory.com/",
   "logo": "https://nursingedgeadvisory.com/favicon-180.png",
   "image": "https://nursingedgeadvisory.com/og-image.png",
   "email": "info@nursingedgeadvisory.com",
-  "description": "NursingEdge unifies shared governance, Magnet accreditation readiness, quality projects, and nursing excellence into one connected platform, with hands-on Magnet advisory.",
+  "telephone": "+1-726-255-1056",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NM",
+    "addressCountry": "US"
+  },
+  "areaServed": ["US", "SA", "AE", "QA", "KW", "BH", "OM"],
+  "sameAs": ["https://www.linkedin.com/company/nursingedgeadvisory"],
+  "description": "NursingEdge unifies shared governance, Magnet designation readiness, quality projects, and nursing excellence into one connected platform, with hands-on Magnet advisory.",
   "founder": {
     "@type": "Person",
     "name": "Ahmad Abu Jaber",
-    "jobTitle": "Founder & Principal Consultant"
+    "jobTitle": "Founder & Chief Executive Officer"
   }
 }
 </script>
@@ -1220,6 +1243,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       if(res.ok){
         form.hidden = true;
         successEl.hidden = false;
+        var heading = successEl.querySelector('h3');
+        if(heading) heading.focus();
       } else {
         throw new Error('Form submission failed');
       }

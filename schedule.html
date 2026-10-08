@@ -6,6 +6,19 @@
 <title>Schedule a Call — NursingEdge</title>
 <meta name="description" content="Book a platform demo or a Magnet advisory consultation with NursingEdge founder Ahmad Abu Jaber.">
 <link rel="canonical" href="https://nursingedgeadvisory.com/schedule.html">
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nursingedgeadvisory.com/schedule.html">
+<meta property="og:title" content="Schedule a Call — NursingEdge">
+<meta property="og:description" content="Book a platform demo or a Magnet advisory consultation with NursingEdge founder Ahmad Abu Jaber.">
+<meta property="og:image" content="https://nursingedgeadvisory.com/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Schedule a Call — NursingEdge">
+<meta name="twitter:description" content="Book a platform demo or a Magnet advisory consultation with NursingEdge founder Ahmad Abu Jaber.">
+<meta name="twitter:image" content="https://nursingedgeadvisory.com/og-image.png">
+
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
@@ -32,18 +45,18 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 
 header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:40px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff}
 .brand-name{font-family:var(--display);font-weight:700;font-size:1.25rem}
 .brand-name span{color:var(--teal)}
 .nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;white-space:nowrap;transition:color .2s}
 .nav-links a:hover{color:var(--teal)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:12px;transition:transform .18s ease,box-shadow .18s ease;cursor:pointer;border:none}
 .btn-primary{background:linear-gradient(120deg,var(--indigo) 0%,var(--indigo-deep) 100%);color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.35)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,95,232,.45);color:#fff}
 .btn-primary:disabled{opacity:.6;cursor:default;transform:none}
-.nav .btn{padding:10px 20px;font-size:.88rem}
+.nav .btn{padding:10px 20px;font-size:.88rem;white-space:nowrap}
 .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:60}
 .nav-toggle span{width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
 .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -60,25 +73,26 @@ section{padding:72px 0}
 .schedule-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
 
 .info-card{background:var(--card);border:1px solid #E7ECF7;border-radius:var(--radius);padding:32px 28px}
-.info-card h3{font-size:1.05rem;margin-bottom:14px;color:var(--navy-800)}
+.info-card h2{font-size:1.05rem;margin-bottom:14px;color:var(--navy-800)}
 .info-list{display:grid;gap:16px;margin-bottom:24px}
 .info-item{display:flex;gap:14px;align-items:flex-start}
 .info-item .ic{flex:none;width:32px;height:32px;border-radius:9px;background:rgba(79,95,232,.1);display:flex;align-items:center;justify-content:center}
-.info-item h4{font-size:.92rem;margin-bottom:2px;color:var(--navy-800)}
+.info-item h3{font-size:.92rem;margin-bottom:2px;color:var(--navy-800)}
 .info-item p{font-size:.86rem;color:var(--slate)}
 .info-card .alt{font-size:.88rem;color:var(--slate);padding-top:18px;border-top:1px solid #E7ECF7}
 .info-card .alt a{color:var(--indigo-deep);text-decoration:underline}
 
 .book-card{background:#fff;border:1px solid #E7ECF7;border-radius:var(--radius);padding:36px 34px;box-shadow:0 20px 50px rgba(16,28,69,.08)}
-.reason-toggle{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px}
-.reason-toggle input{position:absolute;opacity:0;pointer-events:none}
-.reason-toggle label{display:block;cursor:pointer;border:1.5px solid #E7ECF7;border-radius:14px;padding:16px 16px;transition:border-color .18s ease,background .18s ease}
+.reason-fieldset{border:0;padding:0;margin:0;min-width:0}
+.reason-toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px}
+.reason-toggle input{position:absolute;left:0;top:0;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}
+.reason-toggle label{position:relative;display:block;cursor:pointer;border:1.5px solid #E7ECF7;border-radius:14px;padding:16px 16px;transition:border-color .18s ease,background .18s ease}
 .reason-toggle label .rt-title{font-family:var(--display);font-weight:600;font-size:.95rem;color:var(--navy-800);margin-bottom:4px;display:block}
 .reason-toggle label .rt-sub{font-size:.8rem;color:var(--slate)}
 .reason-toggle input:checked + label{border-color:var(--indigo);background:rgba(79,95,232,.06)}
 .reason-toggle input:focus-visible + label{outline:3px solid var(--teal);outline-offset:2px}
 
-.book-form label.field-label{display:block;font-size:.82rem;font-weight:600;color:var(--navy-800);margin-bottom:6px}
+.book-form .field-label{display:block;padding:0;font-size:.82rem;font-weight:600;color:var(--navy-800);margin-bottom:6px}
 .form-row{display:flex;gap:14px;margin-bottom:16px}
 .form-row .field{flex:1}
 .book-form input,.book-form textarea{width:100%;padding:12px 15px;border-radius:11px;border:1.5px solid #DCE3F3;background:#fff;color:var(--ink);font-family:var(--body);font-size:.95rem}
@@ -88,7 +102,7 @@ section{padding:72px 0}
 .tz-note{font-size:.78rem;color:var(--slate);margin:-8px 0 18px}
 
 .form-success{text-align:center;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.3);border-radius:14px;padding:32px 24px}
-.form-success h3{font-family:var(--display);font-size:1.15rem;margin-bottom:8px;color:var(--navy-800)}
+.form-success h2{font-family:var(--display);font-size:1.15rem;margin-bottom:8px;color:var(--navy-800)}
 .form-success p{color:var(--slate);font-size:.95rem;margin:0}
 .form-error{background:rgba(239,96,96,.08);border:1px solid rgba(239,96,96,.35);border-radius:12px;padding:14px 18px;font-size:.88rem;color:#8a2e2e;margin-bottom:18px}
 
@@ -101,22 +115,35 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 
 @media (max-width:960px){
   .schedule-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){.form-row{flex-direction:column;gap:0}.reason-toggle{grid-template-columns:1fr}.page-hero{padding:56px 0 48px}.book-card{padding:26px 22px}}
+
+/* ---------- Mobile menu (switches at 1100px) ---------- */
+@media (max-width:1100px){
   .nav-toggle{display:flex}
   .nav-links{
     position:fixed;top:72px;left:0;right:0;height:calc(100vh - 72px);z-index:60;
     background:#0A1330;
     flex-direction:column;align-items:flex-start;padding:28px 24px;gap:6px;
-    overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;
-    transition:opacity .25s ease,transform .25s ease;
+    overflow-y:auto;opacity:0;transform:translateY(-16px);pointer-events:none;visibility:hidden;
+    transition:opacity .25s ease,transform .25s ease,visibility 0s linear .25s;
   }
-  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto}
+  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto;visibility:visible;transition:opacity .25s ease,transform .25s ease,visibility 0s linear 0s}
   .nav-links a{font-size:1.08rem;padding:10px 0;width:100%}
   .nav-links .btn{width:100%;justify-content:center;margin-top:14px}
 }
-@media (max-width:560px){.form-row{flex-direction:column;gap:0}.reason-toggle{grid-template-columns:1fr}.page-hero{padding:56px 0 48px}.book-card{padding:26px 22px}}
+
+/* ---------- Accessibility helpers ---------- */
+.skip-link{position:absolute;left:16px;top:-100px;z-index:200;background:#fff;color:#16213E;font-family:var(--display);font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+.skip-link:focus{top:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Footer contact line */
+.foot-copy a{color:rgba(255,255,255,.8);text-decoration:none}
+.foot-copy a:hover{color:var(--teal)}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -142,17 +169,16 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <span></span><span></span><span></span>
     </button>
     <nav class="nav-links" id="mainNav" aria-label="Main navigation">
-      <a href="/#modules">Platform</a>
-      <a href="/#advisory">Advisory</a>
+      <a href="index.html#modules">Platform</a>
+      <a href="index.html#advisory">Advisory</a>
       <a href="/courses.html">Courses</a>
       <a href="/team.html">Team</a>
-      <a href="/#careers">Careers</a>
       <a class="btn btn-primary" href="/schedule.html">Schedule a call</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <div class="page-hero">
   <div class="container">
@@ -166,29 +192,30 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   <div class="container schedule-grid">
 
     <div class="info-card">
-      <h3>What to expect</h3>
+      <h2>What to expect</h2>
       <div class="info-list">
         <div class="info-item">
           <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#4F5FE8" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-          <div><h4>30–45 minutes</h4><p>Over Zoom, Teams, or your organization's preferred platform.</p></div>
+          <div><h3>30–45 minutes</h3><p>Over Zoom, Teams, or your organization's preferred platform.</p></div>
         </div>
         <div class="info-item">
           <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="4" stroke="#4F5FE8" stroke-width="1.8"/></svg></span>
-          <div><h4>You'll meet Ahmad directly</h4><p>No sales layer — you're talking to the founder and, for advisory work, the consultant matched to your setting.</p></div>
+          <div><h3>You'll meet Ahmad directly</h3><p>No sales layer — you're talking to the founder and, for advisory work, the consultant matched to your setting.</p></div>
         </div>
         <div class="info-item">
           <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10.5 L8.5 15 L20 3.5" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><h4>Confirmed by email</h4><p>This form sends a request, not an automatic booking — you'll get a confirmation with the final time and video link.</p></div>
+          <div><h3>Confirmed by email</h3><p>This form sends a request, not an automatic booking — you'll get a confirmation with the final time and video link.</p></div>
         </div>
       </div>
       <p class="alt">Prefer to just email? Write to <a href="mailto:info@nursingedgeadvisory.com?subject=NursingEdge%20scheduling%20request">info@nursingedgeadvisory.com</a>.</p>
     </div>
 
     <div class="book-card">
-      <p class="form-error" id="formError" hidden>Something went wrong sending your request — please try again, or email us directly.</p>
+      <p class="form-error" id="formError" role="alert" hidden>Something went wrong sending your request — please try again, or email us directly.</p>
 
       <form class="book-form" id="scheduleForm" action="https://formspree.io/f/xykqvpgg" method="POST">
-        <label class="field-label">What would you like to book?</label>
+        <fieldset class="reason-fieldset">
+        <legend class="field-label">What would you like to book?</legend>
         <div class="reason-toggle">
           <input type="radio" name="reason" id="reasonDemo" value="Platform demo" checked>
           <label for="reasonDemo"><span class="rt-title">Platform demo</span><span class="rt-sub">See NursingEdge in action</span></label>
@@ -196,6 +223,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
           <input type="radio" name="reason" id="reasonAdvisory" value="Magnet advisory consultation">
           <label for="reasonAdvisory"><span class="rt-title">Magnet advisory</span><span class="rt-sub">Talk through your Magnet journey</span></label>
         </div>
+        </fieldset>
 
         <div class="form-row">
           <div class="field">
@@ -204,10 +232,11 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
           </div>
           <div class="field">
             <label class="field-label" for="prefTime">Preferred time</label>
-            <input type="time" id="prefTime" name="preferred_time" required>
+            <input type="time" id="prefTime" name="preferred_time" aria-describedby="tzNote" required>
           </div>
         </div>
-        <p class="tz-note">Times are in your local timezone — we'll confirm the exact slot in an email.</p>
+        <p class="tz-note" id="tzNote">Your time zone: <span id="tzLabel">your local time</span>. We'll confirm the exact slot in an email.</p>
+        <input type="hidden" name="timezone" id="tz">
 
         <div class="form-row">
           <div class="field">
@@ -249,8 +278,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
         <button type="submit" class="btn btn-primary">Request this time</button>
       </form>
 
-      <div class="form-success" id="formSuccess" hidden>
-        <h3>Request sent</h3>
+      <div class="form-success" id="formSuccess" role="status" hidden>
+        <h2 tabindex="-1">Request sent</h2>
         <p>Thanks — Ahmad will confirm your time by email within one business day.</p>
       </div>
     </div>
@@ -268,7 +297,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
         <span class="brand-name">Nursing<span style="color:var(--teal)">Edge</span></span>
       </a>
       <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
-      <div>© 2026 NursingEdge. All rights reserved.</div>
+      <div class="foot-copy">&copy; 2026 Nursing Edge Advisory LLC &middot; New Mexico, USA<br><a href="mailto:info@nursingedgeadvisory.com">info@nursingedgeadvisory.com</a> &middot; <a href="tel:+17262551056">(726) 255-1056</a></div>
     </div>
     <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> · </span><a href="/terms.html">Terms of Use</a></div>
     <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, Pathway to Excellence<sup>&reg;</sup>, PTAP<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and NursingEdge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
@@ -303,6 +332,16 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   if(altDateInput) altDateInput.min = today;
 })();
 
+// Visitor time zone: sent with the request and shown next to the time field
+(function(){
+  var tz = '';
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch(e) {}
+  var field = document.getElementById('tz');
+  var label = document.getElementById('tzLabel');
+  if(field) field.value = tz;
+  if(label && tz) label.textContent = tz;
+})();
+
 (function(){
   var form = document.getElementById('scheduleForm');
   var successEl = document.getElementById('formSuccess');
@@ -323,6 +362,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       if(res.ok){
         form.hidden = true;
         successEl.hidden = false;
+        var heading = successEl.querySelector('h2');
+        if(heading) heading.focus();
       } else {
         throw new Error('Form submission failed');
       }
