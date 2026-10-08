@@ -304,7 +304,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <div>Nursing Excellence Platform &amp; Magnet Advisory</div>
       <div class="foot-copy">&copy; 2026 Nursing Edge Advisory LLC &middot; New Mexico, USA<br><a href="mailto:info@nursingedgeadvisory.com">info@nursingedgeadvisory.com</a> &middot; <a href="tel:+17262551056">(726) 255-1056</a></div>
     </div>
-    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> · </span><a href="/terms.html">Terms of Use</a><span aria-hidden="true"> &middot; </span><a href="/careers.html">Careers</a></div>
+    <div class="foot-links"><a href="/privacy.html">Privacy Policy</a><span aria-hidden="true"> · </span><a href="/terms.html">Terms of Use</a><span aria-hidden="true"> &middot; </span><a href="/careers.html">Careers</a><span aria-hidden="true"> &middot; </span><a href="#" data-cookie-settings>Cookie settings</a></div>
     <p class="trademark-note">Magnet<sup>&reg;</sup>, Magnet Recognition Program<sup>&reg;</sup>, and ANCC<sup>&reg;</sup> are registered trademarks of the American Nurses Credentialing Center (ANCC). NursingEdge and Nursing Edge Advisory are independent products and services and are not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association.</p>
   </div>
 </footer>
@@ -367,6 +367,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       if(res.ok){
         form.hidden = true;
         successEl.hidden = false;
+        if (window.neTrack) window.neTrack('generate_lead', {form: 'readiness_call'});
         var heading = successEl.querySelector('h2');
         if(heading) heading.focus();
       } else {
@@ -380,5 +381,6 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   });
 })();
 </script>
+<script src="/analytics.js" defer></script>
 </body>
 </html>
