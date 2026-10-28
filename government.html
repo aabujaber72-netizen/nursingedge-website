@@ -137,9 +137,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
   --g-rule:#d5ddec;
 font-family:Inter,sans-serif;color:var(--g-body);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
 .gov h1,.gov h2,.gov h3{font-family:"Space Grotesk",sans-serif;color:var(--g-ink);margin:0;letter-spacing:inherit}
-.gov section.light :focus-visible,.gov .tile :focus-visible{outline-color:#0b3d4a}
+.gov .registered :focus-visible{outline-color:#0b3d4a}
 .gov .registered{scroll-margin-top:80px}
-@media (max-width:640px){.gov .tile.band .creds{white-space:normal;font-size:clamp(22px,7vw,30px)}.gov .ask .mail{word-break:break-all;font-size:clamp(16px,5vw,22px)}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .gov :focus-visible{outline:3px solid var(--g-teal);outline-offset:3px;border-radius:6px}
 .gov *{box-sizing:border-box}
@@ -187,7 +186,6 @@ font-family:Inter,sans-serif;color:var(--g-body);line-height:1.65;font-size:17px
 .gov .registered .gw{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
 .gov .registered h2{font-size:clamp(36px,4.6vw,58px);line-height:1.02;letter-spacing:-.035em}
 .gov .registered p{max-width:420px;margin:22px 0 32px;color:var(--g-quiet)}
-.gov .seal{width:150px;height:150px;display:block}
 .gov .ledger{margin:0;background:var(--g-ink);color:#fff;border-radius:22px;padding:14px 36px;box-shadow:12px 12px 0 var(--g-teal)}
 .gov .ledger div{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.14)}
 .gov .ledger div:last-child{border-bottom:0}
@@ -270,6 +268,7 @@ font-family:Inter,sans-serif;color:var(--g-body);line-height:1.65;font-size:17px
 .gov .ask .alt{text-decoration:underline;text-underline-offset:4px}
 .gov .ids{margin-top:56px;font-size:14px;color:#e6e4fd}
 
+@media (max-width:640px){.gov .tile.band .creds{white-space:normal;font-size:clamp(22px,7vw,30px)}.gov .ask .mail{overflow-wrap:anywhere;font-size:clamp(16px,5vw,22px)}}
 </style>
 </head>
 <body>
@@ -371,7 +370,7 @@ font-family:Inter,sans-serif;color:var(--g-body);line-height:1.65;font-size:17px
           </div>
           <div>
             <h3>Accreditation readiness</h3>
-            <p>Readiness reviews for hospital accreditation programs such as The Joint Commission, DNV and CIHQ, built on published standards.</p>
+            <p>Readiness reviews for hospital accreditation programs such as The Joint Commission, DNV and CIHQ, built on published standards. Not affiliated with or endorsed by those organizations.</p>
           </div>
         </article>
         <article class="tile indigo">
@@ -423,7 +422,7 @@ font-family:Inter,sans-serif;color:var(--g-body);line-height:1.65;font-size:17px
     <div class="gw">
       <h2 id="h-support">Where we fit in your contract.</h2>
       <div class="cols">
-        <div><h3>Federal healthcare programs</h3><p>Quality, patient safety and accreditation readiness for federal and tribal health facilities, including Indian Health Service sites, and the contractors who serve them.</p></div>
+        <div><h3>Federal healthcare programs</h3><p>Quality, patient safety and accreditation readiness for federal and tribal health facilities and the contractors who serve them.</p></div>
         <div><h3>Prime contractors</h3><p>A named quality and accreditation specialist for proposal and delivery teams, under a subcontract or teaming agreement.</p></div>
         <div><h3>State, local and tribal health</h3><p>Readiness reviews, governance design and staff training for public hospitals and clinics.</p></div>
       </div>
