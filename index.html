@@ -55,6 +55,18 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
 .eyebrow.dark{color:var(--indigo-deep)}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 
+
+/* ---------- Work in pictures ---------- */
+.work{background:var(--white)}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work-tile{position:relative;display:block;border-radius:var(--radius);overflow:hidden;border:1px solid #E7ECF7;box-shadow:0 14px 36px rgba(16,28,69,.08);background:var(--navy-800)}
+.work-tile img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .35s ease}
+.work-tile:hover img{transform:scale(1.04)}
+.work-tile span{position:absolute;left:0;right:0;bottom:0;padding:36px 16px 14px;background:linear-gradient(to top,rgba(10,19,48,.88),rgba(10,19,48,0));color:#fff;font-size:.88rem;line-height:1.4}
+.work-tile:first-child img{object-position:50% 28%}
+@media (max-width:960px){.work-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.work-grid{grid-template-columns:1fr}}
+
 /* ---------- Nav ---------- */
 header{position:sticky;top:0;z-index:50;background:rgba(10,19,48,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .25s ease}
 header.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.22)}
@@ -391,6 +403,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       <a href="courses.html">Courses</a>
       <a href="government.html">Government</a>
       <a href="team.html">Team</a>
+      <a href="gallery.html">Gallery</a>
       <a class="btn btn-primary" href="schedule.html">Book a free readiness call</a>
     </nav>
   </div>
@@ -568,6 +581,26 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 </section>
 
 <!-- ================= FOUNDER ================= -->
+<!-- ================= WORK IN PICTURES ================= -->
+<section class="work" id="work" aria-labelledby="work-title">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:36px">
+      <span class="eyebrow dark">Our work in pictures</span>
+      <h2 id="work-title">In the room where readiness is built</h2>
+      <p>Keynotes, workshops and hospital training sessions across the Gulf and the United States. Readiness is taught on the floor, with the people who do the work.</p>
+    </div>
+    <div class="work-grid">
+      <a class="work-tile" href="gallery.html"><img src="images/gallery/magnet-pathway-2025-800.jpg" alt="ANCC Magnet & Pathway Conference 2025, United States" width="600" height="800" loading="lazy"><span>ANCC Magnet &amp; Pathway Conference 2025, United States</span></a>
+      <a class="work-tile" href="gallery.html"><img src="images/gallery/dhahran-eye-symposium-2018-800.jpg" alt="Keynote at the Dhahran Eye Specialist Hospital Nursing Symposium, Al Khobar, September 2018" width="600" height="800" loading="lazy"><span>Keynote at the Dhahran Eye Specialist Hospital Nursing Symposium, Al Khobar, September 2018</span></a>
+      <a class="work-tile" href="gallery.html"><img src="images/gallery/quality-equation-800.jpg" alt="Teaching the quality equation: appropriateness, outcome, service and waste" width="800" height="600" loading="lazy"><span>Teaching the quality equation: appropriateness, outcome, service and waste</span></a>
+      <a class="work-tile" href="gallery.html"><img src="images/gallery/coaching-clinical-team-800.jpg" alt="Coaching a clinical team through a root-cause analysis exercise" width="800" height="533" loading="lazy"><span>Coaching a clinical team through a root-cause analysis exercise</span></a>
+      <a class="work-tile" href="gallery.html"><img src="images/gallery/fmea-workshop-800.jpg" alt="Failure mode and effects analysis (FMEA) workshop for nursing leaders" width="800" height="598" loading="lazy"><span>Failure mode and effects analysis (FMEA) workshop for nursing leaders</span></a>
+      <a class="work-tile" href="gallery.html"><img src="images/gallery/saudi-patient-safety-center-800.jpg" alt="Lecture on latent errors and the normalization of deviance, Saudi Patient Safety Center" width="800" height="434" loading="lazy"><span>Lecture on latent errors and the normalization of deviance, Saudi Patient Safety Center</span></a>
+    </div>
+    <div style="margin-top:32px"><a class="btn btn-primary" href="gallery.html">See the full gallery</a></div>
+  </div>
+</section>
+
 <section class="founder" id="founder" aria-labelledby="founder-title">
   <div class="container founder-grid">
     <div class="founder-card">
