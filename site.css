@@ -82,3 +82,25 @@ header .nav-links a.btn-primary:hover{background:#67e8f9;color:var(--band)}
 .process-step{border-left-color:rgba(45,212,191,.45)}
 .process-step::before{background:var(--teal-b);box-shadow:none}
 .gov .gbtn:hover{transform:none}
+
+/* Government hero: same flat dark band and cyan main button as the rest. */
+.gov .ghero{background:var(--band)}
+.gov .ghero::before{display:none}
+.gov .ghero a.gbtn:not(.line){background:var(--cyan);color:var(--band)}
+.gov .ghero a.gbtn:not(.line):hover{background:#67e8f9}
+
+/* A page that is only a dark hero (Careers) stays dark down to the footer. */
+main:has(> .page-hero:only-child){background:var(--band)}
+
+/* Phone cookie bar: one compact block, roughly 100px tall. */
+@media (max-width:560px){
+  .ne-consent{padding:8px 12px!important}
+  .ne-consent .in{gap:8px!important}
+}
+
+/* Focus ring: navy on light sections (cyan on white is only 1.8:1),
+   cyan on the dark bands. */
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+header :focus-visible,footer :focus-visible,.hero :focus-visible,.page-hero :focus-visible,.cta :focus-visible,
+.case :focus-visible,.join :focus-visible,.trace :focus-visible,.ghero :focus-visible,.ask :focus-visible,
+.process :focus-visible,.mv :focus-visible,.founder-card :focus-visible,.lightbox :focus-visible,.ne-consent :focus-visible{outline-color:var(--cyan)}

@@ -95,7 +95,7 @@ section{padding:72px 0}
 .book-form [aria-invalid="true"]{border-color:#b4413a}
 .book-form input,.book-form textarea,.book-form select{width:100%;padding:12px 15px;border-radius:11px;border:1.5px solid #DCE3F3;background:#fff;color:var(--ink);font-family:var(--body);font-size:.95rem}
 .book-form select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%234338CA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;padding-right:40px;cursor:pointer}
-.book-form input:focus,.book-form textarea:focus,.book-form select:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.book-form input:focus,.book-form textarea:focus,.book-form select:focus{outline:2px solid #16213e;outline-offset:1px;border-color:#16213e}
 .book-form textarea{min-height:80px;resize:vertical;margin-bottom:18px}
 .book-form .btn-primary{width:100%}
 .tz-note{font-size:.78rem;color:var(--slate);margin:-8px 0 18px}
@@ -240,7 +240,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
         <div class="form-row">
           <div class="field">
             <label class="field-label" for="altDate">Alternate date <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
-            <input type="date" id="altDate" name="alternate_date">
+            <input type="date" id="altDate" name="alternate_date" aria-describedby="altDate-err">
+            <p class="field-err" id="altDate-err" hidden></p>
           </div>
           <div class="field">
             <label class="field-label" for="altTime">Alternate time <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
@@ -338,6 +339,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
   nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  toggle.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget)) closeNav(); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
 </script>
@@ -374,7 +376,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     prefTime: 'Choose a preferred time.',
     fullName: 'Enter your full name.',
     org: 'Enter your organization.',
-    email: 'Enter a work email, like name@hospital.org.'
+    email: 'Enter a work email, like name@hospital.org.',
+    altDate: 'Choose an alternate date, today or later, or leave it blank.'
   };
   function showError(input, msg){
     var err = document.getElementById(input.id + '-err');
@@ -425,6 +428,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       errorEl.hidden = false;
       btn.disabled = false;
       btn.textContent = originalText;
+      btn.focus();
     });
   });
 })();

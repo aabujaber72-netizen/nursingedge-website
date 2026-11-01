@@ -14,13 +14,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nursingedgeadvisory.com/">
 <meta property="og:title" content="Nursing Edge Advisory | Magnet and accreditation readiness advisory">
-<meta property="og:description" content="Nursing Edge Advisory helps hospitals prepare for Magnet designation and hospital accreditation, with hands-on advisory from a former nursing surveyor for an accreditation body outside the United States.">
+<meta property="og:description" content="Magnet&reg; and hospital accreditation readiness advisory led by a former hospital accreditation surveyor. Book a free 45-minute readiness call.">
 <meta property="og:image" content="https://nursingedgeadvisory.com/og-image.png">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nursing Edge Advisory | Magnet and accreditation readiness advisory">
-<meta name="twitter:description" content="Nursing Edge Advisory helps hospitals prepare for Magnet designation and hospital accreditation, with hands-on advisory from a former nursing surveyor for an accreditation body outside the United States.">
+<meta name="twitter:description" content="Magnet&reg; and hospital accreditation readiness advisory led by a former hospital accreditation surveyor. Book a free 45-minute readiness call.">
 <meta name="twitter:image" content="https://nursingedgeadvisory.com/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -123,15 +123,23 @@ section{padding:96px 0}
 .problem-card .tag{font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo-deep);background:rgba(79,95,232,.09);padding:5px 12px;border-radius:999px;display:inline-block;margin-bottom:16px}
 
 /* Advisory */
-.advisory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.advisory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.advisory-grid .problem-card{background:none;border:none;border-top:1px solid #E7ECF7;border-radius:0;padding:24px 0}
+.advisory-grid .problem-card h3{font-size:1.15rem}
 .advisory-diff{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px;padding-top:44px;border-top:1px solid #E7ECF7}
 .advisory-note{margin-top:32px;font-size:.8rem;line-height:1.55;color:var(--slate);max-width:760px}
-@media (max-width:960px){.advisory-grid{grid-template-columns:repeat(2,1fr)}.advisory-diff{grid-template-columns:1fr}}
+@media (max-width:960px){.advisory-diff{grid-template-columns:1fr}}
 @media (max-width:560px){.advisory-grid{grid-template-columns:1fr}}
 
 /* Courses */
 .courses{background:var(--card);border-top:1px solid #E7ECF7;border-bottom:1px solid #E7ECF7}
-.courses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.courses-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:960px}
+.courses-grid .course-cat-card{display:grid;grid-template-columns:minmax(180px,1fr) 2fr auto;align-items:center;gap:6px 28px;padding:22px 26px}
+.courses-grid .course-cat-card h3{margin:0}
+.courses-grid .course-cat-card p{margin:0}
+.courses-grid .course-cat-card .cat-count{grid-column:1;margin:4px 0 0;justify-self:start}
+.courses-grid .course-cat-card .cat-link{grid-column:3;grid-row:1 / span 2;white-space:nowrap}
+@media (max-width:760px){.courses-grid .course-cat-card{grid-template-columns:1fr}.courses-grid .course-cat-card .cat-link{grid-column:1;grid-row:auto}}
 .course-cat-card{background:#fff;border:1px solid #E7ECF7;border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .course-cat-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(16,28,69,.10);border-color:rgba(34,211,238,.5)}
 .course-cat-card .cat-icon{width:44px;height:44px;border-radius:12px;background:rgba(79,95,232,.09);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
@@ -365,11 +373,11 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="hero" aria-labelledby="hero-title" style="padding-top:88px">
+<section class="hero" aria-labelledby="hero-title" style="padding-top:88px;padding-bottom:88px">
   <div class="container hero-grid" style="grid-template-columns:1fr;max-width:900px">
     <div>
       <span class="eyebrow">Advisory for nursing and quality leaders</span>
-      <h1 id="hero-title">Magnet and accreditation readiness,<br><em>led by a former hospital accreditation surveyor.</em></h1>
+      <h1 id="hero-title">Magnet and accreditation readiness,<br><em>led by a former hospital surveyor.</em></h1>
       <p class="lead">Hands-on advisory for Magnet<sup>&reg;</sup> designation, hospital accreditation readiness, professional governance, and quality and patient safety. Led by a nurse quality leader who surveyed 91 hospitals over nine years for a national accreditation body outside the United States.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="schedule.html">Book a free readiness call</a>
@@ -377,7 +385,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
       </div>
       <div class="hero-proof">
         <div class="proof reveal-item"><strong>3</strong><span>professional certifications: CPHQ, CPPS, CPHRM</span></div>
-        <div class="proof reveal-item"><strong>17+</strong><span>years in nursing quality, patient safety, and accreditation</span></div>
+        <div class="proof reveal-item"><strong>17</strong><span>years in nursing quality, patient safety and accreditation</span></div>
         <div class="proof reveal-item"><strong>91</strong><span>hospitals surveyed by our founder as a nursing surveyor for a national accreditation body outside the United States</span></div>
       </div>
     </div>
@@ -390,7 +398,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Why it matters</span>
-      <h2 id="case-title">The business case for nursing excellence is already proven</h2>
+      <h2 id="case-title">What nurse turnover costs a hospital</h2>
       <p>Independent industry research makes the case for investing in governance, retention and Magnet&reg; readiness.</p>
     </div>
     <div class="case-grid">
@@ -474,18 +482,18 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     </div>
     <div class="courses-grid">
       <div class="course-cat-card reveal-item">
+        <span class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 L20 6.5 V12 C20 16.5 16.5 20.2 12 21 C7.5 20.2 4 16.5 4 12 V6.5 Z" stroke="#4F5FE8" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12 L11.2 14.2 L15.5 9.5" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>CPPS exam prep</h3>
+        <p>Prepares you for the Certified Professional in Patient Safety exam from CBPPS.</p>
+        <span class="cat-count">In session, 1 to 4 Nov</span>
+        <a class="cat-link" href="courses.html#cpps">CPPS details &rarr;</a>
+      </div>
+      <div class="course-cat-card reveal-item">
         <span class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17 L9 11 L13 15 L21 6" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6 H21 V12" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <h3>CPHQ exam prep</h3>
         <p>Prepares you for the Certified Professional in Healthcare Quality exam from NAHQ.</p>
         <span class="cat-count">Next cohort dates coming soon</span>
         <a class="cat-link" href="courses.html#cphq">CPHQ details &rarr;</a>
-      </div>
-      <div class="course-cat-card reveal-item">
-        <span class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 L20 6.5 V12 C20 16.5 16.5 20.2 12 21 C7.5 20.2 4 16.5 4 12 V6.5 Z" stroke="#4F5FE8" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12 L11.2 14.2 L15.5 9.5" stroke="#4F5FE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>CPPS exam prep</h3>
-        <p>Prepares you for the Certified Professional in Patient Safety exam from CBPPS.</p>
-        <span class="cat-count">November cohort in session. Next dates coming soon</span>
-        <a class="cat-link" href="courses.html#cpps">CPPS details &rarr;</a>
       </div>
       <div class="course-cat-card reveal-item">
         <span class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#4F5FE8" stroke-width="1.8"/><path d="M12 7 V12.5 M12 16 V16.5" stroke="#4F5FE8" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -607,7 +615,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     "@type": "Person",
     "name": "Ahmad Abu Jaber",
     "jobTitle": "Founder & Chief Executive Officer",
-    "hasCredential": ["RN", "CPHQ", "CPPS", "CPHRM"],
+    "hasCredential": ["RN", "MHSM", "CPHQ", "CPPS", "CPHRM"],
     "knowsAbout": ["Magnet designation", "Hospital accreditation", "Healthcare quality", "Patient safety"]
   }
 }
@@ -669,6 +677,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   nav.addEventListener('focusout', function(e){
     if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav();
   });
+  toggle.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget)) closeNav(); });
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); }
   });

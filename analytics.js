@@ -60,11 +60,18 @@
     var skip = document.querySelector('.skip-link');
     document.body.insertBefore(box, skip ? skip.nextSibling : document.body.firstChild);
 
+    // After a choice the bar goes away; move focus to the page content so
+    // keyboard users are not dropped back at the top of the document.
+    function done() {
+      box.remove();
+      var main = document.getElementById('main');
+      if (main) { if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1'); main.focus({ preventScroll: true }); }
+    }
     box.querySelector('.yes').addEventListener('click', function () {
-      setChoice('granted'); box.remove(); loadGA();
+      setChoice('granted'); done(); loadGA();
     });
     box.querySelector('.no').addEventListener('click', function () {
-      setChoice('denied'); box.remove();
+      setChoice('denied'); done();
     });
   }
 

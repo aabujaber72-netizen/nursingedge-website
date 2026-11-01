@@ -84,7 +84,7 @@ section{padding:80px 0}
 .course-card p{font-size:.9rem;color:var(--slate);margin-bottom:16px;flex:1}
 .course-card h3{font-size:1.15rem}
 .course-card .body{font-size:.82rem;color:var(--slate);margin-bottom:6px}
-.course-meta{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:8px;border-top:1px solid #E7ECF7;padding-top:16px}
+.course-meta{list-style:none;padding:0;margin:auto 0 20px;display:grid;gap:8px;border-top:1px solid #E7ECF7;padding-top:16px}
 .course-meta li{font-size:.86rem;color:var(--ink)}
 .course-meta li span{display:block;font-family:var(--display);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:2px}
 .course-card .btn{width:100%}
@@ -282,6 +282,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
   nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  toggle.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget)) closeNav(); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
 </script>
