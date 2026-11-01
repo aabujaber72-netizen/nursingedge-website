@@ -1,0 +1,84 @@
+/* Shared brand layer, loaded after each page's own styles.
+   Panel review, November 2026: one palette (navy, cyan, teal), solid buttons,
+   no glow or gradient text, sentence-case labels, no hover lift, calm motion,
+   44px tap targets, and reduced-motion respected on every page.
+   Brand: navy #16213e, wave navy #1e2a57, dark band #0f172a, cyan #22d3ee,
+   teal #2dd4bf, light text #c7d0ea, muted #8c97b5 (dark backgrounds only). */
+
+:root{
+  --navy:#16213e; --navy-wave:#1e2a57; --band:#0f172a;
+  --cyan:#22d3ee; --teal-b:#2dd4bf; --light:#c7d0ea; --muted-d:#8c97b5;
+  /* Old indigo accents now resolve to brand navy, so links, chips and labels
+     on light backgrounds stay on palette. */
+  --indigo:#1e2a57; --indigo-deep:#16213e;
+}
+
+/* Footer sits at the bottom of short pages. */
+body{min-height:100vh;display:flex;flex-direction:column}
+body>main,body>#main{flex:1 0 auto}
+
+/* ---------- Buttons: solid, one colour per background ---------- */
+.btn{transition:background-color .15s ease,color .15s ease,border-color .15s ease;min-height:44px}
+.btn:hover{transform:none}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:none}
+.btn-primary:hover{background:var(--navy-wave);box-shadow:none;color:#fff}
+/* On dark bands the main button is cyan with dark text (10:1). */
+header .btn-primary,.hero .btn-primary,.page-hero .btn-primary,.case .btn-primary,
+.cta .btn-primary,.join .btn-primary,.ask .btn-primary,.ghero .btn-primary,footer .btn-primary{
+  background:var(--cyan);color:var(--band)}
+header .btn-primary:hover,.hero .btn-primary:hover,.page-hero .btn-primary:hover,.case .btn-primary:hover,
+.cta .btn-primary:hover,.join .btn-primary:hover,.ask .btn-primary:hover,.ghero .btn-primary:hover,footer .btn-primary:hover{
+  background:#67e8f9;color:var(--band)}
+
+/* ---------- Dark bands: flat brand colour, no glow ---------- */
+.hero,.page-hero,.case,.trace{background:var(--band)}
+.cta,.join{background:var(--navy)}
+.hero::before,.page-hero::before,.case::before,.cta::before,.join::before,.trace::before,.preview::before{display:none}
+.hex-field{display:none}
+.hero h1 em{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--cyan)}
+
+/* ---------- Labels above headings: sentence case, quiet ---------- */
+.eyebrow,.values-sec .tagline{text-transform:none;letter-spacing:0;font-size:.95rem;font-weight:600}
+.eyebrow{color:var(--teal-b)}
+.eyebrow.dark,.values-sec .tagline{color:#4a5578}
+
+/* ---------- Cards: one border, no lift, no icon tiles ---------- */
+.course-cat-card:hover,.module:hover,.case-card:hover,.mockup:hover{transform:none;box-shadow:none}
+.course-cat-card:hover{border-color:var(--navy-wave)}
+.course-cat-card .cat-icon,.case-card .case-icon,.advisory-diff .std-item .dot{display:none}
+.case-card{border-radius:12px}
+.case-card::before{background:var(--teal-b);height:2px}
+.course-cat-card .cat-count,.problem-card .tag,.standard-chip{background:rgba(45,212,191,.14);color:var(--band)}
+.course-cat-card .cat-link{color:var(--navy);display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Tap targets (44px) ---------- */
+.nav-toggle{min-width:44px;min-height:44px;align-items:center}
+.foot-links a{display:inline-block;padding:12px 0}
+@media (max-width:560px){.foot-links a{padding:12px 4px}}
+
+/* ---------- Motion: fast, purposeful, optional ---------- */
+.work-tile img,.gallery-item img,.g-item img{transition:transform .2s ease}
+.js-reveal .reveal-item{transition:opacity .3s ease,transform .3s ease;transform:translateY(8px)}
+.js-reveal .reveal-item:nth-child(n){transition-delay:0s}
+.live-pill i{animation:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  .js-reveal .reveal-item{opacity:1!important;transform:none!important}
+  .work-tile:hover img,.gallery-item:hover img,.g-item:hover img{transform:none!important}
+}
+
+/* ---------- Government page: same palette ---------- */
+.gov{--g-indigo:#1e2a57;--g-indigo-deep:#16213e;--g-teal:#22d3ee}
+
+/* Booking page: plain text list, no icon tiles. */
+.info-item .ic{display:none}
+
+/* Page-specific leftovers from the old indigo theme. */
+header .nav-links a.btn-primary{background:var(--cyan);color:var(--band);box-shadow:none}
+header .nav-links a.btn-primary:hover{background:#67e8f9;color:var(--band)}
+.course-card:hover{transform:none;box-shadow:none;border-color:var(--navy-wave)}
+.course-card .code,.founder-block .cred{background:rgba(45,212,191,.14);color:var(--band)}
+.culture-card .cic{display:none}
+.process-step{border-left-color:rgba(45,212,191,.45)}
+.process-step::before{background:var(--teal-b);box-shadow:none}
+.gov .gbtn:hover{transform:none}

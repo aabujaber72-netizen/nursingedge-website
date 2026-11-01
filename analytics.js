@@ -31,16 +31,19 @@
 
   function showBanner() {
     var css = document.createElement('style');
+    // A slim bar along the bottom: short on phones so it never hides the
+    // page's main button for long, brand colours, 44px buttons.
     css.textContent =
-      '.ne-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:1000;max-width:560px;margin:0 auto;' +
-      'background:#16213E;color:#E6EAF5;border:1px solid rgba(34,211,238,.3);border-radius:14px;' +
-      'box-shadow:0 18px 50px rgba(0,0,0,.35);padding:18px 20px;font:14px/1.5 Inter,system-ui,sans-serif}' +
-      '.ne-consent p{margin:0 0 12px}.ne-consent a{color:#22D3EE}' +
-      '.ne-consent .row{display:flex;gap:10px;flex-wrap:wrap}' +
-      '.ne-consent button{font:600 14px Inter,system-ui,sans-serif;border-radius:10px;padding:9px 18px;cursor:pointer}' +
-      '.ne-consent .yes{background:#4F5FE8;color:#fff;border:1px solid #4F5FE8}' +
-      '.ne-consent .no{background:transparent;color:#E6EAF5;border:1px solid rgba(230,234,245,.4)}' +
-      '.ne-consent button:focus-visible{outline:2px solid #22D3EE;outline-offset:2px}';
+      '.ne-consent{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:#0f172a;color:#e6eaf5;' +
+      'border-top:1px solid rgba(34,211,238,.35);padding:12px 16px;font:14px/1.45 Inter,system-ui,sans-serif}' +
+      '.ne-consent .in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap}' +
+      '.ne-consent p{margin:0;flex:1 1 320px}.ne-consent a{color:#22d3ee}' +
+      '.ne-consent .row{display:flex;gap:8px}' +
+      '.ne-consent button{font:600 14px Inter,system-ui,sans-serif;border-radius:10px;padding:0 16px;min-height:44px;cursor:pointer}' +
+      '.ne-consent .yes{background:#22d3ee;color:#0f172a;border:1px solid #22d3ee}' +
+      '.ne-consent .no{background:transparent;color:#e6eaf5;border:1px solid rgba(230,234,245,.45)}' +
+      '.ne-consent button:focus-visible{outline:2px solid #22d3ee;outline-offset:2px}' +
+      '@media (max-width:560px){.ne-consent{padding:10px 12px;font-size:13px}.ne-consent p{flex-basis:100%}.ne-consent .row{width:100%}.ne-consent button{flex:1}}';
     document.head.appendChild(css);
 
     var box = document.createElement('div');
@@ -48,11 +51,14 @@
     box.setAttribute('role', 'region');
     box.setAttribute('aria-label', 'Cookie choice');
     box.innerHTML =
-      '<p>We use Google Analytics cookies to see how visitors use this site, only if you allow it. ' +
+      '<div class="in"><p>We use Google Analytics cookies only if you allow it. ' +
       'See our <a href="/privacy.html">Privacy Policy</a>.</p>' +
       '<div class="row"><button type="button" class="yes">Allow analytics</button>' +
-      '<button type="button" class="no">No thanks</button></div>';
-    document.body.appendChild(box);
+      '<button type="button" class="no">No thanks</button></div></div>';
+    // First in the page, so keyboard users reach the choice right after the
+    // skip link instead of after every other link.
+    var skip = document.querySelector('.skip-link');
+    document.body.insertBefore(box, skip ? skip.nextSibling : document.body.firstChild);
 
     box.querySelector('.yes').addEventListener('click', function () {
       setChoice('granted'); box.remove(); loadGA();

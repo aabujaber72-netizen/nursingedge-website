@@ -96,6 +96,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 .foot-copy a{color:rgba(255,255,255,.8);text-decoration:none}
 .foot-copy a:hover{color:var(--teal)}
 </style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -136,16 +137,16 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 <main id="main">
 <div class="container">
 <h1>Terms of Use</h1>
-<p class="updated">Last updated: October 8, 2026</p>
+<p class="updated">Last updated: November 1, 2026</p>
 
 <h2>1. Acceptance of terms</h2>
 <p>This website is operated by Nursing Edge Advisory LLC, New Mexico, USA. By accessing this website, you agree to these Terms of Use. If you do not agree, please do not use this site.</p>
 
 <h2>2. This website</h2>
-<p>This site provides information about Nursing Edge Advisory LLC, its advisory services, and the NursingEdge platform, and lets you book a free readiness call. It does not itself process patient or protected health information. Use of the NursingEdge platform by a healthcare organization is governed by a separate customer agreement.</p>
+<p>This site provides information about Nursing Edge Advisory LLC, its advisory services and exam prep courses, and lets you book a free readiness call. It does not process patient or protected health information. Advisory engagements and courses are governed by a separate written agreement.</p>
 
 <h2>3. Intellectual property</h2>
-<p>All content on this site, including text, graphics, logos, and the NursingEdge name and marks, is owned by Nursing Edge Advisory LLC or its licensors and may not be copied or reused without permission.</p>
+<p>All content on this site, including text, graphics, and the Nursing Edge Advisory name and logo, is owned by Nursing Edge Advisory LLC or its licensors and may not be copied or reused without permission.</p>
 
 <h2>4. Third-party trademarks</h2>
 <p>Magnet&reg;, Magnet Recognition Program&reg;, and ANCC&reg; are registered trademarks of the American Nurses Credentialing Center (ANCC). References to these marks are for identification purposes only. Nursing Edge Advisory LLC is not sponsored, endorsed by, or affiliated with ANCC or the American Nurses Association, and use of these terms does not imply any such affiliation or endorsement.</p>
@@ -198,7 +199,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
+  nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
 </script>
 <script src="/analytics.js" defer></script>

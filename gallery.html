@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nursing Edge Advisory | Our work in pictures</title>
+<title>Our Work in Pictures: Workshops and Talks | Nursing Edge Advisory</title>
 <meta name="description" content="Photos from Nursing Edge Advisory's work: conference keynotes, quality and patient-safety workshops, and hospital training sessions led by founder Ahmad Abu Jaber.">
 <link rel="canonical" href="https://nursingedgeadvisory.com/gallery.html">
 <!-- Open Graph / Facebook / LinkedIn -->
@@ -114,14 +114,14 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 
 /* ---------- Gallery ---------- */
 .gallery-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
-.gallery-tabs button{font-family:var(--display);font-weight:600;font-size:.9rem;padding:10px 18px;border-radius:999px;border:1.5px solid #E7ECF7;background:#fff;color:var(--slate);cursor:pointer;transition:all .18s ease}
-.gallery-tabs button:hover{border-color:var(--indigo);color:var(--indigo-deep)}
-.gallery-tabs button[aria-pressed="true"]{background:linear-gradient(120deg,var(--indigo),var(--indigo-deep));border-color:transparent;color:#fff;box-shadow:0 8px 24px rgba(79,95,232,.3)}
+.gallery-tabs button{font-family:var(--display);font-weight:600;font-size:.9rem;padding:10px 18px;min-height:44px;border-radius:999px;border:1.5px solid #d5ddec;background:#fff;color:var(--slate);cursor:pointer;transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+.gallery-tabs button:hover{border-color:#16213e;color:#16213e}
+.gallery-tabs button[aria-pressed="true"]{background:#16213e;border-color:#16213e;color:#fff}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.gallery-item{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--navy-800);border:1px solid #E7ECF7;box-shadow:0 14px 36px rgba(16,28,69,.08);cursor:zoom-in;padding:0;text-align:left}
-.gallery-item img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;transition:transform .35s ease}
-.gallery-item:hover img{transform:scale(1.04)}
-.gallery-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:38px 16px 14px;background:linear-gradient(to top,rgba(10,19,48,.88),rgba(10,19,48,0));color:#fff;font-size:.88rem;line-height:1.4}
+.gallery-item{position:relative;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:#fff;border:1px solid #E7ECF7;cursor:zoom-in;padding:0;text-align:left;font:inherit;color:inherit}
+.gallery-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;transition:transform .2s ease}
+.gallery-item:hover img{transform:scale(1.02)}
+.gallery-item figcaption{display:block;padding:12px 14px 14px;color:var(--ink);font-size:.9rem;line-height:1.45}
 .gallery-item[hidden]{display:none}
 .gallery-tag{position:absolute;top:12px;left:12px;font-family:var(--display);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(34,211,238,.18);border:1px solid rgba(34,211,238,.5);color:#fff;padding:4px 10px;border-radius:999px;backdrop-filter:blur(6px)}
 @media (max-width:960px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
@@ -140,6 +140,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 @media (max-width:600px){.lightbox .lb-prev,.lightbox .lb-next{top:auto;bottom:18px;transform:none}}
 .gallery-note{color:var(--slate);font-size:.92rem;margin-top:28px;max-width:72ch}
 </style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -182,7 +183,6 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 
 <div class="page-hero">
   <div class="container">
-    <span class="eyebrow">Nursing Edge Advisory</span>
     <h1>Our work in pictures</h1>
     <p>Conference keynotes, quality and patient-safety workshops, and hospital training sessions across the Gulf and the United States, led by founder Ahmad Abu Jaber. Every engagement starts the same way: in the room with the people who do the work.</p>
   </div>
@@ -191,7 +191,6 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 <section aria-labelledby="gallery-title">
   <div class="container">
     <div class="section-head" style="margin-bottom:28px">
-      <span class="eyebrow dark">Gallery</span>
       <h2 id="gallery-title">Where we have worked</h2>
       <p>Select a group, or open any photo to view it full size.</p>
     </div>
@@ -201,94 +200,76 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
       <button type="button" data-filter="workshops" aria-pressed="false">Courses &amp; workshops</button>
     </div>
     <div class="gallery-grid" id="galleryGrid">
-      <button class="gallery-item" type="button" data-group="conferences" data-full="/images/gallery/magnet-pathway-2025.jpg" data-caption="ANCC Magnet &amp; Pathway Conference 2025, United States" aria-label="Open photo: ANCC Magnet & Pathway Conference 2025, United States">
-        <img src="/images/gallery/magnet-pathway-2025-800.jpg" alt="ANCC Magnet & Pathway Conference 2025, United States" width="600" height="800" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Conferences &amp; speaking</span>
-        <figcaption aria-hidden="true">ANCC Magnet &amp; Pathway Conference 2025, United States</figcaption>
+      <button class="gallery-item" type="button" data-group="conferences" data-full="/images/gallery/magnet-pathway-2025.jpg" data-caption="Attending the ANCC Magnet &amp; Pathway Conference 2025, United States" aria-label="Open photo: Attending the ANCC Magnet & Pathway Conference 2025, United States">
+        <img src="/images/gallery/magnet-pathway-2025-800.jpg" srcset="/images/gallery/magnet-pathway-2025-400.jpg 400w, /images/gallery/magnet-pathway-2025-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Attending the ANCC Magnet & Pathway Conference 2025, United States" width="600" height="800" loading="lazy">
+        <figcaption aria-hidden="true">Attending the ANCC Magnet &amp; Pathway Conference 2025, United States</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="conferences" data-full="/images/gallery/dhahran-eye-symposium-2018.jpg" data-caption="Keynote at the Dhahran Eye Specialist Hospital Nursing Symposium, Al Khobar, September 2018" aria-label="Open photo: Keynote at the Dhahran Eye Specialist Hospital Nursing Symposium, Al Khobar, September 2018">
-        <img src="/images/gallery/dhahran-eye-symposium-2018-800.jpg" alt="Keynote at the Dhahran Eye Specialist Hospital Nursing Symposium, Al Khobar, September 2018" width="600" height="800" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Conferences &amp; speaking</span>
+        <img src="/images/gallery/dhahran-eye-symposium-2018-800.jpg" srcset="/images/gallery/dhahran-eye-symposium-2018-400.jpg 400w, /images/gallery/dhahran-eye-symposium-2018-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Keynote at the Dhahran Eye Specialist Hospital Nursing Symposium, Al Khobar, September 2018" width="600" height="800" loading="lazy">
         <figcaption aria-hidden="true">Keynote at the Dhahran Eye Specialist Hospital Nursing Symposium, Al Khobar, September 2018</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="conferences" data-full="/images/gallery/saudi-patient-safety-center.jpg" data-caption="Lecture on latent errors and the normalization of deviance, Saudi Patient Safety Center" aria-label="Open photo: Lecture on latent errors and the normalization of deviance, Saudi Patient Safety Center">
-        <img src="/images/gallery/saudi-patient-safety-center-800.jpg" alt="Lecture on latent errors and the normalization of deviance, Saudi Patient Safety Center" width="800" height="434" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Conferences &amp; speaking</span>
+        <img src="/images/gallery/saudi-patient-safety-center-800.jpg" srcset="/images/gallery/saudi-patient-safety-center-400.jpg 400w, /images/gallery/saudi-patient-safety-center-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Lecture on latent errors and the normalization of deviance, Saudi Patient Safety Center" width="800" height="434" loading="lazy">
         <figcaption aria-hidden="true">Lecture on latent errors and the normalization of deviance, Saudi Patient Safety Center</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="conferences" data-full="/images/gallery/ksapt-2021.jpg" data-caption="Recognition at the KSAPT 2021 annual meeting (pharmacy and toxicology), Saudi Arabia" aria-label="Open photo: Recognition at the KSAPT 2021 annual meeting (pharmacy and toxicology), Saudi Arabia">
-        <img src="/images/gallery/ksapt-2021-800.jpg" alt="Recognition at the KSAPT 2021 annual meeting (pharmacy and toxicology), Saudi Arabia" width="800" height="533" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Conferences &amp; speaking</span>
+        <img src="/images/gallery/ksapt-2021-800.jpg" srcset="/images/gallery/ksapt-2021-400.jpg 400w, /images/gallery/ksapt-2021-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Recognition at the KSAPT 2021 annual meeting (pharmacy and toxicology), Saudi Arabia" width="800" height="533" loading="lazy">
         <figcaption aria-hidden="true">Recognition at the KSAPT 2021 annual meeting (pharmacy and toxicology), Saudi Arabia</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="conferences" data-full="/images/gallery/hospital-leadership-session.jpg" data-caption="Speaking at a hospital leadership session" aria-label="Open photo: Speaking at a hospital leadership session">
-        <img src="/images/gallery/hospital-leadership-session-800.jpg" alt="Speaking at a hospital leadership session" width="800" height="450" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Conferences &amp; speaking</span>
+        <img src="/images/gallery/hospital-leadership-session-800.jpg" srcset="/images/gallery/hospital-leadership-session-400.jpg 400w, /images/gallery/hospital-leadership-session-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Speaking at a hospital leadership session" width="800" height="450" loading="lazy">
         <figcaption aria-hidden="true">Speaking at a hospital leadership session</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="conferences" data-full="/images/gallery/nursing-delegates-exhibition.jpg" data-caption="With nursing delegates at a healthcare exhibition" aria-label="Open photo: With nursing delegates at a healthcare exhibition">
-        <img src="/images/gallery/nursing-delegates-exhibition-800.jpg" alt="With nursing delegates at a healthcare exhibition" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Conferences &amp; speaking</span>
+        <img src="/images/gallery/nursing-delegates-exhibition-800.jpg" srcset="/images/gallery/nursing-delegates-exhibition-400.jpg 400w, /images/gallery/nursing-delegates-exhibition-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="With nursing delegates at a healthcare exhibition" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">With nursing delegates at a healthcare exhibition</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/quality-equation.jpg" data-caption="Teaching the quality equation: appropriateness, outcome, service and waste" aria-label="Open photo: Teaching the quality equation: appropriateness, outcome, service and waste">
-        <img src="/images/gallery/quality-equation-800.jpg" alt="Teaching the quality equation: appropriateness, outcome, service and waste" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/quality-equation-800.jpg" srcset="/images/gallery/quality-equation-400.jpg 400w, /images/gallery/quality-equation-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Teaching the quality equation: appropriateness, outcome, service and waste" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">Teaching the quality equation: appropriateness, outcome, service and waste</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/stopping-the-line.jpg" data-caption="Lean in healthcare: what "stopping the line" means on a ward" aria-label="Open photo: Lean in healthcare: what stopping the line means on a ward">
-        <img src="/images/gallery/stopping-the-line-800.jpg" alt="Lean in healthcare: what stopping the line means on a ward" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/stopping-the-line-800.jpg" srcset="/images/gallery/stopping-the-line-400.jpg 400w, /images/gallery/stopping-the-line-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Lean in healthcare: what stopping the line means on a ward" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">Lean in healthcare: what "stopping the line" means on a ward</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/gemba.jpg" data-caption="Go to the gemba: leading improvement where the work happens" aria-label="Open photo: Go to the gemba: leading improvement where the work happens">
-        <img src="/images/gallery/gemba-800.jpg" alt="Go to the gemba: leading improvement where the work happens" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/gemba-800.jpg" srcset="/images/gallery/gemba-400.jpg 400w, /images/gallery/gemba-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Go to the gemba: leading improvement where the work happens" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">Go to the gemba: leading improvement where the work happens</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/healthcare-imperatives.jpg" data-caption="Opening a quality-improvement workshop for hospital teams" aria-label="Open photo: Opening a quality-improvement workshop for hospital teams">
-        <img src="/images/gallery/healthcare-imperatives-800.jpg" alt="Opening a quality-improvement workshop for hospital teams" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/healthcare-imperatives-800.jpg" srcset="/images/gallery/healthcare-imperatives-400.jpg 400w, /images/gallery/healthcare-imperatives-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Opening a quality-improvement workshop for hospital teams" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">Opening a quality-improvement workshop for hospital teams</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/identify-waste.jpg" data-caption="Group exercise: identifying the eight wastes in clinical processes" aria-label="Open photo: Group exercise: identifying the eight wastes in clinical processes">
-        <img src="/images/gallery/identify-waste-800.jpg" alt="Group exercise: identifying the eight wastes in clinical processes" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/identify-waste-800.jpg" srcset="/images/gallery/identify-waste-400.jpg 400w, /images/gallery/identify-waste-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Group exercise: identifying the eight wastes in clinical processes" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">Group exercise: identifying the eight wastes in clinical processes</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/workshop-floor.jpg" data-caption="Working the room during a process-improvement workshop" aria-label="Open photo: Working the room during a process-improvement workshop">
-        <img src="/images/gallery/workshop-floor-800.jpg" alt="Working the room during a process-improvement workshop" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/workshop-floor-800.jpg" srcset="/images/gallery/workshop-floor-400.jpg 400w, /images/gallery/workshop-floor-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Working the room during a process-improvement workshop" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">Working the room during a process-improvement workshop</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/hospital-wide-training.jpg" data-caption="Hospital-wide quality and accreditation readiness training" aria-label="Open photo: Hospital-wide quality and accreditation readiness training">
-        <img src="/images/gallery/hospital-wide-training-800.jpg" alt="Hospital-wide quality and accreditation readiness training" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/hospital-wide-training-800.jpg" srcset="/images/gallery/hospital-wide-training-400.jpg 400w, /images/gallery/hospital-wide-training-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Hospital-wide quality and accreditation readiness training" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">Hospital-wide quality and accreditation readiness training</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/hospital-team-celebration.jpg" data-caption="With the hospital quality and nursing team after an accreditation readiness session" aria-label="Open photo: With the hospital quality and nursing team after an accreditation readiness session">
-        <img src="/images/gallery/hospital-team-celebration-800.jpg" alt="With the hospital quality and nursing team after an accreditation readiness session" width="800" height="600" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/hospital-team-celebration-800.jpg" srcset="/images/gallery/hospital-team-celebration-400.jpg 400w, /images/gallery/hospital-team-celebration-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="With the hospital quality and nursing team after an accreditation readiness session" width="800" height="600" loading="lazy">
         <figcaption aria-hidden="true">With the hospital quality and nursing team after an accreditation readiness session</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/reflect-what-you-see.jpg" data-caption="Patient-safety training: one minute reflecting on what you see" aria-label="Open photo: Patient-safety training: one minute reflecting on what you see">
-        <img src="/images/gallery/reflect-what-you-see-800.jpg" alt="Patient-safety training: one minute reflecting on what you see" width="800" height="410" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/reflect-what-you-see-800.jpg" srcset="/images/gallery/reflect-what-you-see-400.jpg 400w, /images/gallery/reflect-what-you-see-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Patient-safety training: one minute reflecting on what you see" width="800" height="410" loading="lazy">
         <figcaption aria-hidden="true">Patient-safety training: one minute reflecting on what you see</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/coaching-clinical-team.jpg" data-caption="Coaching a clinical team through a root-cause analysis exercise" aria-label="Open photo: Coaching a clinical team through a root-cause analysis exercise">
-        <img src="/images/gallery/coaching-clinical-team-800.jpg" alt="Coaching a clinical team through a root-cause analysis exercise" width="800" height="533" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/coaching-clinical-team-800.jpg" srcset="/images/gallery/coaching-clinical-team-400.jpg 400w, /images/gallery/coaching-clinical-team-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Coaching a clinical team through a root-cause analysis exercise" width="800" height="533" loading="lazy">
         <figcaption aria-hidden="true">Coaching a clinical team through a root-cause analysis exercise</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/nursing-leaders-training.jpg" data-caption="Training session for nursing leaders" aria-label="Open photo: Training session for nursing leaders">
-        <img src="/images/gallery/nursing-leaders-training-800.jpg" alt="Training session for nursing leaders" width="800" height="598" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/nursing-leaders-training-800.jpg" srcset="/images/gallery/nursing-leaders-training-400.jpg 400w, /images/gallery/nursing-leaders-training-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Training session for nursing leaders" width="800" height="598" loading="lazy">
         <figcaption aria-hidden="true">Training session for nursing leaders</figcaption>
       </button>
       <button class="gallery-item" type="button" data-group="workshops" data-full="/images/gallery/fmea-workshop.jpg" data-caption="Failure mode and effects analysis (FMEA) workshop for nursing leaders" aria-label="Open photo: Failure mode and effects analysis (FMEA) workshop for nursing leaders">
-        <img src="/images/gallery/fmea-workshop-800.jpg" alt="Failure mode and effects analysis (FMEA) workshop for nursing leaders" width="800" height="598" loading="lazy">
-        <span class="gallery-tag" aria-hidden="true">Courses &amp; workshops</span>
+        <img src="/images/gallery/fmea-workshop-800.jpg" srcset="/images/gallery/fmea-workshop-400.jpg 400w, /images/gallery/fmea-workshop-800.jpg 800w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px" alt="Failure mode and effects analysis (FMEA) workshop for nursing leaders" width="800" height="598" loading="lazy">
         <figcaption aria-hidden="true">Failure mode and effects analysis (FMEA) workshop for nursing leaders</figcaption>
       </button>
     </div>
@@ -348,7 +329,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
+  nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
 </script>
 <script>
@@ -364,14 +346,30 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
   });});
   var lb=document.getElementById('lightbox'), img=document.getElementById('lbImg'), cap=document.getElementById('lbCap'), idx=0, last=null;
   function show(i){ idx=(i+visible.length)%visible.length; var it=visible[idx]; img.src=it.getAttribute('data-full'); img.alt=it.querySelector('img').alt; cap.innerHTML=it.getAttribute('data-caption'); }
-  function open(it){ last=document.activeElement; show(visible.indexOf(it)); lb.hidden=false; lb.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
-  function close(){ lb.classList.remove('open'); lb.hidden=true; document.body.style.overflow=''; img.src=''; if(last) last.focus(); }
+  // While the viewer is open the page behind it is inert, and Tab cycles
+  // through the viewer's own buttons.
+  var behind=['header','main','footer'].map(function(sel){ return document.querySelector(sel); }).filter(Boolean);
+  function setInert(on){ behind.forEach(function(el){ if(on){ el.setAttribute('inert',''); el.setAttribute('aria-hidden','true'); } else { el.removeAttribute('inert'); el.removeAttribute('aria-hidden'); } }); }
+  function open(it){ last=document.activeElement; show(visible.indexOf(it)); lb.hidden=false; lb.classList.add('open'); document.body.style.overflow='hidden'; setInert(true); document.getElementById('lbClose').focus(); }
+  function close(){ lb.classList.remove('open'); lb.hidden=true; document.body.style.overflow=''; setInert(false); img.src=''; if(last) last.focus(); }
   items.forEach(function(it){ it.addEventListener('click',function(){ open(it); }); });
   document.getElementById('lbClose').addEventListener('click',close);
   document.getElementById('lbPrev').addEventListener('click',function(){ show(idx-1); });
   document.getElementById('lbNext').addEventListener('click',function(){ show(idx+1); });
   lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
-  document.addEventListener('keydown',function(e){ if(lb.hidden) return; if(e.key==='Escape') close(); if(e.key==='ArrowLeft') show(idx-1); if(e.key==='ArrowRight') show(idx+1); });
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden) return;
+    if(e.key==='Escape') close();
+    if(e.key==='ArrowLeft') show(idx-1);
+    if(e.key==='ArrowRight') show(idx+1);
+    if(e.key==='Tab'){
+      var btns=Array.prototype.slice.call(lb.querySelectorAll('button'));
+      var i=btns.indexOf(document.activeElement);
+      e.preventDefault();
+      var next=e.shiftKey ? (i<=0 ? btns.length-1 : i-1) : (i===-1||i===btns.length-1 ? 0 : i+1);
+      btns[next].focus();
+    }
+  });
 })();
 </script>
 <script src="/analytics.js" defer></script>

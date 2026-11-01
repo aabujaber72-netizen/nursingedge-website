@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nursing Edge Advisory | Government and public sector</title>
+<title>Government and Public Sector Healthcare Quality | Nursing Edge Advisory</title>
 <meta name="description" content="Albuquerque healthcare quality and accreditation readiness consulting. Active in SAM.gov. Serving agencies and prime contractors.">
 <link rel="canonical" href="https://nursingedgeadvisory.com/government.html">
 <!-- Open Graph / Facebook / LinkedIn -->
@@ -270,6 +270,7 @@ font-family:Inter,sans-serif;color:var(--g-body);line-height:1.65;font-size:17px
 
 @media (max-width:640px){.gov .tile.band .creds{white-space:normal;font-size:clamp(22px,7vw,30px)}.gov .ask .mail{overflow-wrap:anywhere;font-size:clamp(16px,5vw,22px)}}
 </style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -475,7 +476,8 @@ font-family:Inter,sans-serif;color:var(--g-body);line-height:1.65;font-size:17px
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
+  nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
 </script>
 <script src="/analytics.js" defer></script>

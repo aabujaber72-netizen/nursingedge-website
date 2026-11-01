@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nursing Edge Advisory | Book a free readiness call</title>
+<title>Book a Free 45-Minute Readiness Call | Nursing Edge Advisory</title>
 <meta name="description" content="Book a free 45-minute readiness call with Ahmad Abu Jaber, founder of Nursing Edge Advisory. Get a short written summary by email afterward.">
 <link rel="canonical" href="https://nursingedgeadvisory.com/schedule.html">
 <!-- Open Graph / Facebook / LinkedIn -->
@@ -90,6 +90,9 @@ section{padding:72px 0}
 .book-form .field-label{display:block;padding:0;font-size:.82rem;font-weight:600;color:var(--navy-800);margin-bottom:6px}
 .form-row{display:flex;gap:14px;margin-bottom:16px}
 .form-row .field{flex:1}
+.req-note{font-size:.85rem;color:var(--slate);margin:0 0 14px}
+.field-err{color:#b4413a;font-size:.85rem;margin:6px 0 0}
+.book-form [aria-invalid="true"]{border-color:#b4413a}
 .book-form input,.book-form textarea,.book-form select{width:100%;padding:12px 15px;border-radius:11px;border:1.5px solid #DCE3F3;background:#fff;color:var(--ink);font-family:var(--body);font-size:.95rem}
 .book-form select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%234338CA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;padding-right:40px;cursor:pointer}
 .book-form input:focus,.book-form textarea:focus,.book-form select:focus{outline:2px solid var(--teal);border-color:var(--teal)}
@@ -137,6 +140,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
 .foot-copy a{color:rgba(255,255,255,.8);text-decoration:none}
 .foot-copy a:hover{color:var(--teal)}
 </style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -212,19 +216,22 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     </div>
 
     <div class="book-card">
-      <p class="form-error" id="formError" role="alert" hidden>Something went wrong sending your request — please try again, or email us directly.</p>
+      <p class="form-error" id="formError" role="alert" hidden>Something went wrong sending your request. Please try again, or email us directly.</p>
 
-      <form class="book-form" id="scheduleForm" action="https://formspree.io/f/xykqvpgg" method="POST">
+      <form class="book-form" id="scheduleForm" action="https://formspree.io/f/xykqvpgg" method="POST" novalidate>
+        <p class="req-note">All fields are required unless marked optional.</p>
         <input type="hidden" name="reason" value="readiness-call">
 
         <div class="form-row">
           <div class="field">
             <label class="field-label" for="prefDate">Preferred date</label>
-            <input type="date" id="prefDate" name="preferred_date" required>
+            <input type="date" id="prefDate" name="preferred_date" aria-describedby="prefDate-err" required>
+            <p class="field-err" id="prefDate-err" hidden></p>
           </div>
           <div class="field">
             <label class="field-label" for="prefTime">Preferred time</label>
-            <input type="time" id="prefTime" name="preferred_time" aria-describedby="tzNote" required>
+            <input type="time" id="prefTime" name="preferred_time" aria-describedby="tzNote prefTime-err" required>
+            <p class="field-err" id="prefTime-err" hidden></p>
           </div>
         </div>
         <p class="tz-note" id="tzNote">Your time zone: <span id="tzLabel">your local time</span>. We'll confirm the exact slot in an email.</p>
@@ -244,21 +251,24 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
         <div class="form-row">
           <div class="field">
             <label class="field-label" for="fullName">Full name</label>
-            <input type="text" id="fullName" name="name" required>
+            <input type="text" id="fullName" name="name" aria-describedby="fullName-err" autocomplete="name" required>
+            <p class="field-err" id="fullName-err" hidden></p>
           </div>
           <div class="field">
             <label class="field-label" for="org">Organization</label>
-            <input type="text" id="org" name="organization" required>
+            <input type="text" id="org" name="organization" aria-describedby="org-err" autocomplete="organization" required>
+            <p class="field-err" id="org-err" hidden></p>
           </div>
         </div>
         <div class="form-row">
           <div class="field">
             <label class="field-label" for="email">Work email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" aria-describedby="email-err" autocomplete="email" required>
+            <p class="field-err" id="email-err" hidden></p>
           </div>
           <div class="field">
             <label class="field-label" for="role">Title / role <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
-            <input type="text" id="role" name="title">
+            <input type="text" id="role" name="title" autocomplete="organization-title">
           </div>
         </div>
 
@@ -269,7 +279,9 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
               <option value="">Choose one (optional)</option>
               <option>Magnet designation</option>
               <option>Hospital accreditation</option>
-              <option>Shared governance</option>
+              <option>Professional governance</option>
+              <option>Quality and patient safety</option>
+              <option>Exam prep (individual)</option>
               <option>Not sure yet</option>
             </select>
           </div>
@@ -325,14 +337,18 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
+  nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
 </script>
 <script>
 (function(){
   var dateInput = document.getElementById('prefDate');
   var altDateInput = document.getElementById('altDate');
-  var today = new Date().toISOString().split('T')[0];
+  // The visitor's own calendar date (toISOString would give the UTC date,
+  // a day off for Riyadh after midnight or the US in the evening).
+  var d = new Date();
+  var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   if(dateInput) dateInput.min = today;
   if(altDateInput) altDateInput.min = today;
 })();
@@ -352,9 +368,41 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:44px 0;fon
   var successEl = document.getElementById('formSuccess');
   var errorEl = document.getElementById('formError');
   if(!form || !successEl || !errorEl) return;
+  // Inline, announced errors instead of the browser's pop-ups.
+  var MESSAGES = {
+    prefDate: 'Choose a preferred date, today or later.',
+    prefTime: 'Choose a preferred time.',
+    fullName: 'Enter your full name.',
+    org: 'Enter your organization.',
+    email: 'Enter a work email, like name@hospital.org.'
+  };
+  function showError(input, msg){
+    var err = document.getElementById(input.id + '-err');
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    if(err){ err.textContent = msg || ''; err.hidden = !msg; }
+  }
+  function validate(){
+    var first = null;
+    Object.keys(MESSAGES).forEach(function(id){
+      var input = document.getElementById(id);
+      if(!input) return;
+      var bad = !input.checkValidity();
+      showError(input, bad ? MESSAGES[id] : '');
+      if(bad && !first) first = input;
+    });
+    return first;
+  }
+  Object.keys(MESSAGES).forEach(function(id){
+    var input = document.getElementById(id);
+    if(input) input.addEventListener('blur', function(){
+      if(input.getAttribute('aria-invalid') === 'true') showError(input, input.checkValidity() ? '' : MESSAGES[id]);
+    });
+  });
   form.addEventListener('submit', function(e){
     e.preventDefault();
     errorEl.hidden = true;
+    var firstBad = validate();
+    if(firstBad){ firstBad.focus(); return; }
     var btn = form.querySelector('button[type="submit"]');
     var originalText = btn.textContent;
     btn.disabled = true;

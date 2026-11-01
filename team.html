@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nursing Edge Advisory | Our founder and team</title>
+<title>Ahmad Abu Jaber, Founder and Former Hospital Surveyor | Nursing Edge Advisory</title>
 <meta name="description" content="Founder Ahmad Abu Jaber, RN, CPHQ, CPPS, CPHRM: 17+ years in nursing quality and nine years as a nursing surveyor outside the US across 91 hospitals.">
 <link rel="canonical" href="https://nursingedgeadvisory.com/team.html">
 <!-- Open Graph / Facebook / LinkedIn -->
@@ -123,6 +123,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 .foot-copy a{color:rgba(255,255,255,.8);text-decoration:none}
 .foot-copy a:hover{color:var(--teal)}
 </style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -165,16 +166,14 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 
 <div class="page-hero">
   <div class="container">
-    <span class="eyebrow">Nursing Edge Advisory</span>
     <h1>Meet the founder</h1>
-    <p>Ahmad Abu Jaber leads every Nursing Edge Advisory engagement. He brings 17+ years in nursing quality, patient safety, and accreditation, including nine years as a nursing surveyor for a national accreditation body outside the United States.</p>
+    <p>Ahmad Abu Jaber leads every Nursing Edge Advisory engagement. He brings 17 years in nursing quality, patient safety and accreditation, including nine years as a nursing surveyor for a national accreditation body outside the United States.</p>
   </div>
 </div>
 
 <section>
   <div class="container">
     <div class="section-head" style="margin-bottom:36px">
-      <span class="eyebrow dark">Leadership</span>
       <h2>Founder</h2>
     </div>
     <div class="founder-block">
@@ -182,8 +181,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
       <div>
         <h3>Ahmad Abu Jaber</h3>
         <div class="role">Founder &amp; CEO &middot; Former Hospital Accreditation Nursing Surveyor</div>
-        <p>Nurse and quality leader with 17+ years in nursing quality and patient safety. Nine years as a nursing surveyor for a national accreditation body outside the United States across 91 hospitals. Former Head of Quality Improvement and Accreditation, Security Forces Hospital, Dammam. Quality roles at Johns Hopkins Aramco Healthcare and King Hussein Cancer Center.</p>
-        <p>He saw the evidence of nursing excellence spread across folders, inboxes, and memory. So he founded Nursing Edge Advisory to help hospitals make Magnet readiness a byproduct of daily work.</p>
+        <p>Nurse and quality leader with 17 years in nursing quality and patient safety. Surveyed 91 hospitals over nine years as a nursing surveyor for a national accreditation body outside the United States. Former Head of Quality Improvement and Accreditation, Security Forces Hospital, Dammam. Quality roles at Johns Hopkins Aramco Healthcare and King Hussein Cancer Center.</p>
+        <p>Across those years he saw strong nursing teams struggle to show their work when surveyors arrived. He founded Nursing Edge Advisory to help hospitals build that evidence into the routine of each unit, well before the visit.</p>
         <p>RN, MHSM, CPHQ (NAHQ), CPPS (CBPPS), CPHRM (AHA Certification Center).</p>
         <div class="creds" aria-hidden="true">
           <span class="cred">RN</span><span class="cred">MHSM</span><span class="cred">CPHQ</span><span class="cred">CPPS</span><span class="cred">CPHRM</span>
@@ -196,7 +195,6 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 <section style="padding-top:0">
   <div class="container">
     <div class="staff-note">
-      <span class="eyebrow dark">Staffing</span>
       <h2>How we staff engagements</h2>
       <p>Ahmad leads every engagement. For specialist phases we bring in experienced nurse leaders with Magnet program experience, named in writing in your proposal before work begins.</p>
       <p>You always know who is working on your project, and why.</p>
@@ -245,8 +243,21 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
+  nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ahmad Abu Jaber",
+  "jobTitle": "Founder & Chief Executive Officer",
+  "worksFor": {"@type": "Organization", "name": "Nursing Edge Advisory", "url": "https://nursingedgeadvisory.com/"},
+  "image": "https://nursingedgeadvisory.com/images/ahmad-abu-jaber.jpg",
+  "hasCredential": ["RN", "MHSM", "CPHQ", "CPPS", "CPHRM"],
+  "knowsAbout": ["Magnet designation", "Hospital accreditation", "Healthcare quality", "Patient safety", "Healthcare risk management"]
+}
 </script>
 <script src="/analytics.js" defer></script>
 </body>

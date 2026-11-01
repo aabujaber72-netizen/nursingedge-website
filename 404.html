@@ -101,6 +101,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
 .btn-ghost:hover{background:rgba(34,211,238,.1);border-color:var(--teal)}
 @media (max-width:560px){.notfound{padding:72px 0 96px}.notfound .ctas .btn{width:100%}}
 </style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -186,7 +187,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding:40px 0;fon
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
+  nav.addEventListener('focusout', function(e){ if(nav.classList.contains('open') && e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')){ closeNav(); toggle.focus(); } });
 })();
 </script>
 <script src="/analytics.js" defer></script>
