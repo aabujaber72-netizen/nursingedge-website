@@ -104,3 +104,76 @@ main:has(> .page-hero:only-child){background:var(--band)}
 header :focus-visible,footer :focus-visible,.hero :focus-visible,.page-hero :focus-visible,.cta :focus-visible,
 .case :focus-visible,.join :focus-visible,.trace :focus-visible,.ghero :focus-visible,.ask :focus-visible,
 .process :focus-visible,.mv :focus-visible,.founder-card :focus-visible,.lightbox :focus-visible,.ne-consent :focus-visible{outline-color:var(--cyan)}
+
+/* ================= Home page, November 12 refresh =================
+   Two-column hero with the tracer path, engagement steps, founder moved up,
+   government band. Same palette as above. */
+.hero{padding:88px 0 72px}
+.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,4.3vw,3.5rem);text-wrap:balance}
+.hero p.lead{margin-bottom:30px}
+.hero-proof{margin-top:64px;padding-top:32px;border-top:1px solid rgba(255,255,255,.12);gap:32px}
+.proof{border-left:0;padding-left:0}
+.proof strong{font-size:2rem;line-height:1.1;margin-bottom:6px;font-variant-numeric:tabular-nums}
+.proof span{font-size:.92rem;color:var(--light);display:block;max-width:34ch}
+
+.tracer-card{background:var(--navy);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:30px 30px 26px}
+.tracer-title{font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.4;color:#fff;margin-bottom:24px;max-width:30ch}
+.tracer-list{list-style:none;margin:0;padding:0;counter-reset:stop;position:relative}
+.tracer-list::before{content:"";position:absolute;left:15px;top:16px;bottom:16px;width:2px;background:rgba(34,211,238,.35)}
+.tracer-list li{position:relative;counter-increment:stop;padding:0 0 18px 50px;min-height:50px}
+.tracer-list li:last-child{padding-bottom:0;min-height:32px}
+.tracer-list li::before{content:counter(stop);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--band);border:2px solid var(--cyan);color:#fff;font-family:var(--display);font-weight:600;font-size:.85rem;display:grid;place-items:center}
+.tracer-list li:last-child::before{background:var(--cyan);color:var(--band)}
+.tracer-list strong{display:block;font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.25;color:#fff}
+.tracer-list span{display:block;font-size:.88rem;color:var(--light)}
+
+/* Engagement steps: a real sequence, so it is numbered. */
+.chain.chain-5{grid-template-columns:repeat(5,1fr);list-style:none;margin:0;padding:0;counter-reset:step}
+.chain-5 .chain-step{counter-increment:step;border-left:0;border-top:2px solid rgba(34,211,238,.35);padding:22px 22px 0 0}
+.chain-5 .chain-step::before{content:counter(step);position:static;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--band);border:2px solid var(--cyan);box-shadow:none;color:#fff;font-family:var(--display);font-weight:600;font-size:.9rem;margin:-41px 0 18px}
+.chain-5 .chain-step h3{color:#fff;font-size:1.08rem}
+.chain-5 .chain-step p{color:var(--light);font-size:.92rem}
+.trace .section-head p{color:var(--light)}
+
+/* Founder */
+.founder-card .role{color:var(--light)}
+.creds-line{margin-top:14px;font-family:var(--display);font-weight:600;font-size:.92rem;color:var(--light)}
+.creds-line abbr{text-decoration:none;cursor:help}
+.text-link{font-family:var(--display);font-weight:600;color:var(--navy);text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
+.text-link:hover{color:var(--navy-wave)}
+
+/* Government band */
+.gov-band{background:var(--card,#F7F9FE);border-top:1px solid #E7ECF7;border-bottom:1px solid #E7ECF7}
+.gov-band-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:center}
+.gov-band h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin-bottom:16px}
+.gov-band p{color:var(--slate,#5A6789);font-size:1.05rem;max-width:58ch;margin-bottom:28px}
+.id-plate{background:var(--band);border-radius:16px;padding:8px 28px;margin:0}
+.id-plate div{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(255,255,255,.1)}
+.id-plate div:first-child{border-top:0}
+.id-plate dt{font-size:.85rem;color:var(--light)}
+.id-plate dd{margin:0;font-family:var(--display);font-weight:600;font-size:1.15rem;color:#fff;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.id-plate div:first-child dd{color:var(--cyan)}
+
+/* Course status chip can now run to two lines. */
+.courses-grid .course-cat-card .cat-count{border-radius:10px;line-height:1.4}
+
+@media (max-width:1100px){
+  .chain.chain-5{grid-template-columns:1fr;gap:0}
+  .chain-5 .chain-step{border-top:0;border-left:2px solid rgba(34,211,238,.35);padding:0 0 28px 34px}
+  .chain-5 .chain-step:last-child{padding-bottom:0}
+  .chain-5 .chain-step::before{position:absolute;left:-19px;top:-4px;margin:0}
+}
+@media (max-width:960px){
+  .hero-grid,.gov-band-grid{grid-template-columns:1fr;gap:40px}
+  .hero-proof{margin-top:44px}
+}
+@media (max-width:560px){
+  .hero{padding:56px 0 48px}
+  .hero-proof{gap:20px;padding-top:24px}
+  .tracer-card{padding:24px 22px}
+  .id-plate{padding:4px 20px}
+  .id-plate div{grid-template-columns:1fr;gap:2px}
+}
+.hero h1 em{display:block}
+.tracer-list sup,.id-plate sup{line-height:0}
